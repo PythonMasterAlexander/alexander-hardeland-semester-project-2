@@ -1,0 +1,10 @@
+// Bootstrap variables overrides
+@import "./partials/variables";
+
+// Bootstrap styles
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Original styles
+@import "./partials/header";
+@import "./partials/main";
+@import "./partials/footer";
