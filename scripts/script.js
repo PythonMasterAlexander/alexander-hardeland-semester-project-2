@@ -1,11 +1,14 @@
 import getProducts from './components/getProducts.js';
-import createHtmlElement from './components/createHtmlElement.js';
+import showProductsOnPage from './components/showProductsOnPage.js';
 
-import { baseUrl } from './partials/variables.js';
+import { baseUrl } from './partials/constants.js';
+import { indexPageHtmlContainer } from './partials/variables.js';
+
 const productsUrl = "/products";
 const url = baseUrl + productsUrl;
+const test = getProducts(url);
 
-const testParentElement = document.querySelector(".home");
+const waitForProductsResult = getProducts(url);
+waitForProductsResult.then(showProductsOnPage);
+//Remember the featured is set to either true or false, there are a task in the assignment associated with this
 
-getProducts(url);
-createHtmlElement(testParentElement);

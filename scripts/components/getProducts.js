@@ -1,9 +1,10 @@
-//According to MDN, a IIEF function is best used when you don't need to reuse the function
+import createHtmlElement from './createHtmlElement.js';
+import { indexPageHtmlContainer } from '../partials/variables.js';
+
 const getProducts = async function(url) {
   const response = await fetch(url)
-  const jsonResponse = await response.json();
+  const apiResults = await response.json();
 
-  console.log(jsonResponse);
+  return apiResults;
 };
-
 export default getProducts;
