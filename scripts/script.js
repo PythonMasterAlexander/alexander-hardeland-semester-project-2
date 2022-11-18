@@ -6,7 +6,6 @@ import { indexPageHtmlContainer } from './partials/variables.js';
 
 const productsUrl = "/products";
 const url = baseUrl + productsUrl;
-const test = getProducts(url);
 
 const waitForProductsResult = getProducts(url);
 waitForProductsResult.then(showProductsOnPage);
