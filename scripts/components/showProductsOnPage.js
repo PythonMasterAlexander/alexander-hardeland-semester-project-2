@@ -1,5 +1,5 @@
 import createHtmlElement from './createHtmlElement.js';
-import { indexPageHtmlContainer } from '../partials/variables.js';
+import { indexPageHtmlContainer } from '../constant/variables.js';
 
 const showProductsOnPage = function(products) {
   const errorMessage = products.error;
