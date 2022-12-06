@@ -1,20 +1,32 @@
 {
   "name": "alexander-hardeland-semester-project-2",
-  "version": "1.0.0",
-  "description": "Semester Project 2",
+  "version": "0.0.1",
+  "description": "Cool Kick's website, a commerce website selling shoes",
   "main": "index.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css & live-server"
   },
-  "author": "Alexander Hardeland",
+
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  },
+
+  "bugs": {
+    "url": "https://github.com/PythonMasterAlexander/alexander-hardeland-semester-project-2/issues"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PythonMasterAlexander/alexander-hardeland-semester-project-2"
+  },
+
+  "author": "Alexander Hardeland <alexander_hardeland@proton.me>",
   "license": "ISC",
+
   "devDependencies": {
     "live-server": "^1.2.2",
     "sass": "^1.56.1"
-  },
-  "dependencies": {
-    "bootstrap": "^5.2.2"
   }
 }

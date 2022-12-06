@@ -10771,5 +10771,61 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.nav-link {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-wrapper {
+  flex: 1 0 auto;
+}
+
+footer {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.social-media-section {
+  display: flex;
+}
+.social-media-section__social-media-item {
+  align-items: center;
+  background: #1B998B;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+}
+.social-media-section .fa-duotone {
+  color: white;
+}
+
+.footer-navigation a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=styles.css.map */

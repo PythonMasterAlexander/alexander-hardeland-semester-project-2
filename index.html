@@ -4,37 +4,69 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./dist/css/styles.css">
   <title>Cool Cick's home page</title>
+  <script src="https://kit.fontawesome.com/b06e8bfbf3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="page-wrapper home">
-    <header class="home">
+  <div class="page-wrapper home-page">
+    <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="index.html">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Products</a>
+                <a class="nav-link" href="products.html">products</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
     </header>
-    <main class="home">
+    <main class="home-page">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <section class="show-product-container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div> 
-  <footer class="footer home">
+  <footer class="footer home-page">
+    <section class="logo-section">
+    </section>
+    <section class="social-media-section">
+      <div class="social-media-section__social-media-item">
+        <a><i class="fa-duotone fa-regular fa-envelope fa-xl"></i></a>
+      </div>
+      <div class="social-media-section__social-media-item">
+        <a><i class="fa-duotone fa-brands fa-linkedin fa-xl"></i></a>
+      </div>
+      <div class="social-media-section__social-media-item">
+        <a><i class="fa-duotone fa-brands fa-facebook fa-xl"></i></a>
+      </div>
+    </section>
+    <nav class="footer-navigation">
+      <a href="index.html">home</a>
+      <a href="products.html">products</a>
+    </nav>
   </footer>
   <script src="./scripts/script.js" type="module"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

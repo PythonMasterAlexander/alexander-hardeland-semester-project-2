@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.social-media-section {
+  display: flex;
+
+  &__social-media-item {
+    align-items: center;
+    background: #1B998B;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 44px; 
+    width: 44px;
+  }
+
+  .fa-duotone {
+    color: white;
+  }
+}
+
+.footer-navigation a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
