@@ -18,6 +18,29 @@ body {
   height: 100%;
 }
 
+.search-product-section {
+  display: flex;
+
+  .search-product-section__navigation {
+    display: flex;
+    
+    .link-container {
+      align-items: center;
+      background: #1B998B;
+      border-radius: 100%;
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      height: 40px; 
+      width: 40px;
+    }
+  }  
+}
+
 .page-wrapper {
   flex: 1 0 auto;
+}
+
+.fa-duotone {
+  color: white;
 }
