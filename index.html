@@ -29,11 +29,25 @@
       </nav>
     </header>
     <main class="home-page container">
+      <section class="search-product-section">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <nav class="search-product-section__navigation">
+          <div class="link-container">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-duotone fa-lg"></i></a>
+          </div>
+          <div class="link-container">
+            <a href="login.html"><i class="fa-solid fa-right-to-bracket fa-duotone fa-lg"></i></a>
+          </div>
+        </nav>
+      </section>
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
       <section class="show-product-container">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="home-page__carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="..." class="d-block w-100" alt="...">
@@ -49,27 +63,27 @@
       </section>
     </main>
   </div> 
-  <footer class="footer home-page">
+  <footer class="container">
     <section class="logo-section">
     </section>
     <section class="social-media-section">
       <div class="social-media-section__social-media-item">
-        <a><i class="fa-duotone fa-regular fa-envelope fa-lg"></i></a>
+        <a href="message.html"><i class="fa-duotone fa-regular fa-envelope fa-lg"></i></a>
       </div>
       <div class="social-media-section__social-media-item">
-        <a><i class="fa-duotone fa-brands fa-linkedin fa-lg"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-duotone fa-brands fa-linkedin fa-lg"></i></a>
       </div>
       <div class="social-media-section__social-media-item">
-        <a><i class="fa-duotone fa-brands fa-facebook fa-lg"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-duotone fa-brands fa-facebook fa-lg"></i></a>
       </div>
       <div class="social-media-section__social-media-item">
-        <a><i class="fa-duotone fa-brands fa-twitter fa-lg"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fa-duotone fa-brands fa-twitter fa-lg"></i></a>
       </div>
     </section>
-    <nav class="footer-navigation">
+    <div class="footer-navigation">
       <a href="index.html">home</a>
       <a href="products.html">products</a>
-    </nav>
+    </div>
   </footer>
   <script src="./scripts/script.js" type="module"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
