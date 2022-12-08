@@ -1,4 +1,5 @@
 import createHtmlElement from './createHtmlElement.js';
+
 import { indexPageHtmlContainer } from '../constant/variables.js';
 
 const showProductsOnPage = function(products) {
@@ -13,7 +14,7 @@ const showProductsOnPage = function(products) {
     console.log(apiDataProduct);
 
     return apiDataProduct.map(product => {
-      createHtmlElement(indexPageHtmlContainer, product.id);
+      createHtmlElement(indexPageHtmlContainer, product.id, "div");
     });
   }
 };
