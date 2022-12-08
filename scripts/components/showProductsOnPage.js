@@ -1,6 +1,7 @@
 import createHtmlElement from './createHtmlElement.js';
 import errorMessage from '../utilities/errorMessage.js';
 
+import { errorHeading } from '../constant/constants.js';
 import { indexPageHtmlContainer } from '../constant/variables.js';
 
 const showProductsOnPage = function(products) {
@@ -9,7 +10,7 @@ const showProductsOnPage = function(products) {
 
   if (errorFromApiCall) {
     //This is where I am returning the error function if there is any error from the api call
-    return errorMessage(errorFromApiCall);
+    return errorMessage(indexPageHtmlContainer, errorFromApiCall, errorHeading);
     
   } else {
     return apiDataProduct.map(product => {

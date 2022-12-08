@@ -1,13 +1,10 @@
 import createHtmlElement from '../components/createHtmlElement.js';
 
-import { indexPageHtmlContainer } from '../constant/variables.js';
-import { errorHeading } from '../constant/constants.js';
+const errorMessage = function(containerElement, errorMessage, element) {
+  containerElement.classList.add("alert-warning", "alert");
+  containerElement.setAttribute("role", "alert");
 
-const errorMessage = function(errorMessage) {
-  indexPageHtmlContainer.classList.add("alert-warning", "alert");
-  indexPageHtmlContainer.setAttribute("role", "alert");
-
-  const errorMessageInHtml = createHtmlElement(indexPageHtmlContainer, errorMessage, errorHeading);
+  const errorMessageInHtml = createHtmlElement(containerElement, errorMessage, element);
   return errorMessageInHtml;
 }
 export default errorMessage;

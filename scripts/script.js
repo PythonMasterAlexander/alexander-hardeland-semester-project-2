@@ -5,7 +5,7 @@ import errorMessage from './utilities/errorMessage.js';
 import { baseUrl } from './constant/constants.js';
 import { indexPageHtmlContainer } from './constant/variables.js';
 
-const productsUrl = "/products";
+const productsUrl = "/product";
 const url = baseUrl + productsUrl;
 const waitForProductsResult = getProductsFromApiCall(url);
 
