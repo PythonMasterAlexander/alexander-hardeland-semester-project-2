@@ -25,15 +25,7 @@ body {
     display: flex;
     
     .link-container {
-      //@include media-container-style(#1B998B); --> this throws the error, undefined mixin NB Remember to comment out the styles under
-      align-items: center;
-      background: #1B998B;
-      border-radius: 100%;
-      display: flex;
-      cursor: pointer;
-      justify-content: center;
-      height: 40px; 
-      width: 40px;
+      @include media-container-style(#1B998B); 
     }
   }  
 }
@@ -51,13 +43,3 @@ body {
     display: none;
   }
 }
-
-/*
-@media(max-width: $breakpoint-mobile) {
-  .search-product-section {
-    display: none;
-  }
-}
-*/
-
-

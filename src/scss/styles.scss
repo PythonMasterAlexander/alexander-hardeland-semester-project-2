@@ -5,7 +5,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 // Original styles
+@import './components/mixins';
 @import './components/header';
 @import './components/main';
 @import './components/footer';
-@import './components/mixins';
