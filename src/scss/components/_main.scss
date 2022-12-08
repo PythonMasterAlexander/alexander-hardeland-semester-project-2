@@ -44,3 +44,9 @@ body {
 .fa-duotone {
   color: white;
 }
+
+@media(max-width: $breakpoint-mobile) {
+  .search-product-section {
+    display: none;
+  }
+}
