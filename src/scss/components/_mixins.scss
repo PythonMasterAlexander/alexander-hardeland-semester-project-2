@@ -1,0 +1,10 @@
+@mixin media-container-style($container-color) {
+    align-items: center;
+    background: $symbol-color;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    height: 40px; 
+    width: 40px;
+}
