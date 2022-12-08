@@ -1,13 +1,10 @@
 import errorMessage from '../utilities/errorMessage.js';
-import { indexPageHtmlContainer } from '../constant/variables.js';
 
 const getProductsFromApiCall = async function(url) {
-  //This is the code for where to insert my error message
-  
-  let apiData, error;
+  let apiData, outputError;
 
   if (!url){
-    return error = "Wrong URL address provided";
+    return outputError = "Wrong URL address provided";
   }
 
   try {
@@ -15,14 +12,14 @@ const getProductsFromApiCall = async function(url) {
     if (response.ok) {
       apiData = await response.json();
     } else {
-        error = `Unresponsive API call. Status:  ${response.status}`;
+      outputError = `Unresponsive API call. Status:  ${response.status}`;
     }
   }
 
-  catch (err) {
-    error = err;
+  catch (error) {
+    outputError = error;
   }
 
-  return { apiData, error };
+  return { apiData, outputError };
 };
 export default getProductsFromApiCall;
