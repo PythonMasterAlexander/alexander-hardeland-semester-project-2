@@ -24,6 +24,7 @@ body {
   .search-product-section__navigation {
     display: flex;
     
+    //This is where I want to change the styles to use the mixin I created in the _mixins.scss file
     .link-container {
       align-items: center;
       background: #1B998B;
@@ -50,13 +51,3 @@ body {
     display: none;
   }
 }
-
-/*
-@media(max-width: $breakpoint-mobile) {
-  .search-product-section {
-    display: none;
-  }
-}
-*/
-
-

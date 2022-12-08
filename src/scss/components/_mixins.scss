@@ -1,6 +1,7 @@
+//This mixin are not working
 @mixin media-container-style($container-color) {
     align-items: center;
-    background: $symbol-color;
+    background: $container-color;
     border-radius: 100%;
     display: flex;
     cursor: pointer;
