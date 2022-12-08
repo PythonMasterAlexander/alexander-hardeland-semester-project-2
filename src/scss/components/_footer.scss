@@ -12,14 +12,7 @@ footer {
     display: flex;
 
     &__social-media-item {
-      align-items: center;
-      background: #1B998B;
-      border-radius: 100%;
-      display: flex;
-      cursor: pointer;
-      justify-content: center;
-      height: 40px; 
-      width: 40px;
+      @include media-container-style(#1B998B);
     }
   }
 }
