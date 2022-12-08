@@ -25,6 +25,7 @@ body {
     display: flex;
     
     .link-container {
+      //@include media-container-style(#1B998B); --> this throws the error, undefined mixin NB Remember to comment out the styles under
       align-items: center;
       background: #1B998B;
       border-radius: 100%;
