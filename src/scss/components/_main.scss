@@ -45,8 +45,18 @@ body {
   color: white;
 }
 
+@include media-breakpoint-down(sm) {
+  .search-product-section {
+    display: none;
+  }
+}
+
+/*
 @media(max-width: $breakpoint-mobile) {
   .search-product-section {
     display: none;
   }
 }
+*/
+
+
