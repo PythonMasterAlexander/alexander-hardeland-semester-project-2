@@ -10819,11 +10819,18 @@ body {
   color: white;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   .search-product-section {
     display: none;
   }
 }
+/*
+@media(max-width: $breakpoint-mobile) {
+  .search-product-section {
+    display: none;
+  }
+}
+*/
 footer {
   display: flex;
   flex-shrink: 0;
