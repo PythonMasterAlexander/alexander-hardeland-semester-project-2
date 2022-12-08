@@ -10819,6 +10819,18 @@ body {
   color: white;
 }
 
+@media (max-width: 575.98px) {
+  .search-product-section {
+    display: none;
+  }
+}
+/*
+@media(max-width: $breakpoint-mobile) {
+  .search-product-section {
+    display: none;
+  }
+}
+*/
 footer {
   display: flex;
   flex-shrink: 0;
@@ -10835,8 +10847,8 @@ footer .social-media-section__social-media-item {
   align-items: center;
   background: #1B998B;
   border-radius: 100%;
-  cursor: pointer;
   display: flex;
+  cursor: pointer;
   justify-content: center;
   height: 40px;
   width: 40px;
