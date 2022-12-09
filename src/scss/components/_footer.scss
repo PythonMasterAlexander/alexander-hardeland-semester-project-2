@@ -11,15 +11,9 @@ footer {
   .social-media-section {
     display: flex;
 
+    //This is where I want to change the styles to use the mixin I created in the _mixins.scss file
     &__social-media-item {
-      align-items: center;
-      background: #1B998B;
-      border-radius: 100%;
-      display: flex;
-      cursor: pointer;
-      justify-content: center;
-      height: 40px; 
-      width: 40px;
+      @include media-container-style(#1B998B);
     }
   }
 }
