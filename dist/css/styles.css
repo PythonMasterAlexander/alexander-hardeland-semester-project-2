@@ -10811,6 +10811,11 @@ body {
   width: 40px;
 }
 
+.cart-navigation-section .breadcrumb-item > a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .page-wrapper {
   flex: 1 0 auto;
 }
