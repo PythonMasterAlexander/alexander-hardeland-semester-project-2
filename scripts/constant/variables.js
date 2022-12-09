@@ -1,1 +1,10 @@
-export const indexPageHtmlContainer = document.querySelector(".home");
+export const indexPageHtmlContainer = document.querySelector(".products-container");
+export const containerForErrorMessage = document.querySelector(".container-for-error-message");
+export const errorMessageContainer = document.querySelector(".container-error-message");
+
+export const attributesOnErrorMessage = {
+  alertClass: "alert",
+  warningClass: "alert-warning",
+  ariaAttribute: "role",
+  ariaRole: "alert"
+};

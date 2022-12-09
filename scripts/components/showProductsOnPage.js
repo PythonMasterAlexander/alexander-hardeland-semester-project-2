@@ -1,19 +1,20 @@
 import createHtmlElement from './createHtmlElement.js';
-import { indexPageHtmlContainer } from '../constant/variables.js';
+import  errorMessageToUser from '../utilities/errorMessageToUser.js';
+import addErrorStyleOnProvidedContainer from '../utilities/addErrorStyleOnProvidedContainer.js';
+
+import { errorHeading, divElement } from '../constant/constants.js';
+import { indexPageHtmlContainer, errorMessageContainer, attributesOnErrorMessage } from '../constant/variables.js';
 
 const showProductsOnPage = function(products) {
-  const errorMessage = products.error;
+  const errorFromApiCall = products.outputError;
   const apiDataProduct = products.apiData;
 
-  if (errorMessage) {
-    console.log(errorMessage);
-    //return error variable as a warning to user on the page. Write a reusable function for this
+  if (errorFromApiCall) {
+    return errorMessageToUser(addErrorStyleOnProvidedContainer(errorMessageContainer), errorFromApiCall);
     
   } else {
-    console.log(apiDataProduct);
-
     return apiDataProduct.map(product => {
-      createHtmlElement(indexPageHtmlContainer, product.id);
+      createHtmlElement(indexPageHtmlContainer, product.id, divElement);
     });
   }
 };
