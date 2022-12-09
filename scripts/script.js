@@ -1,11 +1,10 @@
 import getProductsFromApiCall from './components/getProductsFromApiCall.js';
 import showProductsOnPage from './components/showProductsOnPage.js';
-import errorMessage from './utilities/errorMessage.js';
 
 import { baseUrl } from './constant/constants.js';
 import { indexPageHtmlContainer } from './constant/variables.js';
 
-const productsUrl = "/product";
+const productsUrl = "/products";
 const url = baseUrl + productsUrl;
 const waitForProductsResult = getProductsFromApiCall(url);
 
