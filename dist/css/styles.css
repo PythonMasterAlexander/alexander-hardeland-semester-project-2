@@ -10816,12 +10816,20 @@ body {
   text-decoration: none;
 }
 
+.card-payment-group__container {
+  display: flex;
+}
+
 .page-wrapper {
   flex: 1 0 auto;
 }
 
 .fa-duotone {
   color: white;
+}
+
+.search-product-section > .search-product-section__navigation--hidden {
+  display: none;
 }
 
 @media (max-width: 575.98px) {

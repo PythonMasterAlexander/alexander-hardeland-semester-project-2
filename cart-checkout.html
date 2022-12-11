@@ -33,14 +33,14 @@
           <section class="cart-navigation-section">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page"><a href="cart.html">cart</a></li>
-                <li class="breadcrumb-item"><a href="cart-checkout.html">checkout</a></li>
+                <li class="breadcrumb-item active"><a href="cart.html">cart</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="cart-checkout.html">checkout</a></li>
               </ol>
             </nav>
           </section>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success" type="submit">search</button>
           </form>
           <nav class="search-product-section__navigation--hidden">
             <div class="link-container">
@@ -51,56 +51,77 @@
             </div>
           </nav>
         </section>
-        <section class="cart-section">
+        <section class="checkout-section">
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
           </div>
-          <h1>your shopping cart</h1>
+          <h1>checkout your products</h1>
           <section class="container-lg">
-            <div class="row">
-              <div class="col">
-                <div class="card mb-4">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-body">
-                      <hgroup>
-                        <h2>shoe</h2>
-                        <p>shoe size</p>
-                        <p>price</p>
-                      </hgroup>
-                    </div>
-                  </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <h2 class="card-title">summary</h2>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="card-subtitle">products</h3>
+                      <span>43</span>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="card-subtitle">shipping</h3>
+                      <span>20.98$</span>
+                    </li>
+                  </ul>
                 </div>
-                <div class="card mb-4">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-body">
-                      <hgroup>
-                        <h2>shoe</h2>
-                        <p>shoe size</p> 
-                        <p>price</p>
-                      </hgroup>
-                    </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <form action="submit">
+                      <legend>payment</legend>
+                      <div>
+                        <label for="card-number" class="form-label">card number</label>
+                        <input type="text" class="form-control" id="card-number" value="1234 5678 9012 2345" required>
+                        <span class="form-text"></span>
+                      </div>
+                      <div>
+                        <label for="card-holder-name" class="form-label">name on card</label>
+                        <input type="text" class="form-control" id="card-holder-name" required>
+                        <span class="form-text"></span>
+                      </div>
+                      <div>
+                        <div class="card-payment-group__container">
+                          <div>
+                            <label for="expiration" class="form-label">expiration</label>
+                            <input type="text" class="form-control" id="expiration" required>
+                            <span class="form-text"></span>
+                          </div>
+                          <div>
+                            <label for="cvv-number" class="form-label">cvv</label>
+                            <input type="text" class="form-control" id="cvv-number" required>
+                            <span class="form-text"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <p>write some text about payment here</p> 
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-            </div>
           </section>
-        </section>
-        <div class="card">
-          <div class="card-body">
-            <div class="to-checkout-page-link-container">
-              <a href="cart-checkout.html">to checkout</a>
-            </div>
+          <div class="to-cart-page-link-container">
+            <a href="cart.html"><i class="fas fa-angle-left"></i>back to your cart</a>
           </div>
-        </div>
-        <div class="to-product-page-link-container">
-          <a href="index.html"><i class="fas fa-angle-left"></i>back to shopping</a>
-        </div>
+          <div class="to-product-page-link-container">
+            <a href="product.html"><i></i>back to shopping</a>
+          </div>
+          <div class="to-home-page-link-container">
+            <a href="index.html"><i></i>home</a>
+          </div>
+        </section>
       </main>
     </div> 
     <footer class="container">
