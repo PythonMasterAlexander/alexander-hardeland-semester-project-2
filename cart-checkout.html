@@ -78,29 +78,34 @@
               <div class="col">
                 <div class="card">
                   <div class="card-body">
-                    <form action="">
+                    <form action="submit">
                       <legend>payment</legend>
                       <div>
-                        <label for="">card number</label>
-                        <input type="">
+                        <label for="card-number" class="form-label">card number</label>
+                        <input type="text" class="form-control" id="card-number" value="1234 5678 9012 2345" required>
+                        <span class="form-text"></span>
                       </div>
                       <div>
-                        <label for="">name on card</label>
-                        <input type="">
+                        <label for="card-holder-name" class="form-label">name on card</label>
+                        <input type="text" class="form-control" id="card-holder-name" required>
+                        <span class="form-text"></span>
                       </div>
                       <div>
-                        <div>
-                          <label for="">expiration</label>
-                          <input type="">
+                        <div class="card-payment-group__container">
+                          <div>
+                            <label for="expiration" class="form-label">expiration</label>
+                            <input type="text" class="form-control" id="expiration" required>
+                            <span class="form-text"></span>
+                          </div>
+                          <div>
+                            <label for="cvv-number" class="form-label">cvv</label>
+                            <input type="text" class="form-control" id="cvv-number" required>
+                            <span class="form-text"></span>
+                          </div>
                         </div>
-                        <div>
-                          <label for="">cvv</label>
-                          <input type="">
-                        </div>
                       </div>
                       <div>
-                      </div>
-                      <div>
+                        <p>write some text about payment here</p> 
                       </div>
                     </form>
                   </div>
@@ -109,6 +114,12 @@
           </section>
           <div class="to-cart-page-link-container">
             <a href="cart.html"><i class="fas fa-angle-left"></i>back to your cart</a>
+          </div>
+          <div class="to-product-page-link-container">
+            <a href="product.html"><i></i>back to shopping</a>
+          </div>
+          <div class="to-home-page-link-container">
+            <a href="index.html"><i></i>home</a>
           </div>
         </section>
       </main>
