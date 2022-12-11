@@ -10824,6 +10824,10 @@ body {
   color: white;
 }
 
+.search-product-section > .search-product-section__navigation--hidden {
+  display: none;
+}
+
 @media (max-width: 575.98px) {
   .search-product-section {
     display: none;

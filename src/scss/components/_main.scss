@@ -45,6 +45,10 @@ body {
   color: white;
 }
 
+.search-product-section > .search-product-section__navigation--hidden {
+  display: none;
+}
+
 @include media-breakpoint-down(sm) {
   .search-product-section {
     display: none;
