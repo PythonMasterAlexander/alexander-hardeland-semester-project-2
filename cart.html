@@ -28,13 +28,13 @@
           </div>
         </nav>
       </header>
-      <main class="cart-page container">
+      <main class="container">
         <section class="search-product-section">
           <section class="cart-navigation-section">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page"><a href="cart.html">cart</a></li>
-                <li class="breadcrumb-item"><a href="checkout.html">checkout</a></li>
+                <li class="breadcrumb-item"><a href="#">checkout</a></li>
               </ol>
             </nav>
           </section>
@@ -42,7 +42,7 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
-          <nav class="search-product-section__navigation">
+          <nav class="search-product-section__navigation--hidden">
             <div class="link-container">
               <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-duotone fa-lg"></i></a>
             </div>
@@ -88,33 +88,16 @@
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <ul class="list-group">
-                      <li class="list-group-item">
-                        <h2 class="card-title">summary</h2>
-                      </li>
-                      <li class="list-group-item">
-                        <h3 class="card-subtitle">products</h3>
-                        <span>43</span>
-                      </li>
-                      <li class="list-group-item">
-                        <h3 class="card-subtitle">shipping</h3>
-                        <span>20.98$</span>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="button-container">
-                          <a class="btn btn-primary" href="checkout.html" role="button">checkout</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
         </section>
+        <div class="card">
+          <div class="card-body">
+            <div class="to-checkout-page-link-container">
+              <a href="#">to checkout</a>
+            </div>
+          </div>
+        </div>
         <div class="to-product-page-link-container">
           <a href="index.html"><i class="fas fa-angle-left"></i>back to shopping</a>
         </div>
