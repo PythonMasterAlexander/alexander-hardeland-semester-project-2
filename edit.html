@@ -9,11 +9,40 @@
 <body>
   <div class="page-wrapper edit-page">
     <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid justify-content-center">
+          <a class="navbar-brand" href="admin.html">Navbar</a>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main class="container">
+      <h1>edit products</h1>
+      <section class="edit-product-section">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="product image">
+              <div class="card-body">
+                <form>
+                  <div class="form-check">
+                    <label for="title" class="form-title">change title</label>
+                    <input type="text" id="title" class="form-control">
+                    <div class="change-product-container">
+                      <button>change product</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="link-to-admin-container">
+        <a href="admin.html" class="btn btn-primary">admin</a>
+      </div>
     </main>
   </div> 
-  <footer>
-  </footer>
+  <script src="./scripts/script.js" type="module"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
