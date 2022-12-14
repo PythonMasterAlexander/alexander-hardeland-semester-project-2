@@ -10827,8 +10827,12 @@ body {
   color: white;
 }
 
-.search-product-section > .search-product-section__navigation--hidden, #if-password-wrong--show, #if-username-wrong--show {
+.search-product-section > .search-product-section__navigation--hidden {
   display: none;
+}
+
+.form-text {
+  color: red;
 }
 
 @media (max-width: 575.98px) {
