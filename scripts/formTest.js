@@ -1,6 +1,6 @@
-import validateUserLogin from './functions-tes-dir/formTestFile.js';
+import validateUserLoginInformation from './functions-tes-dir/formTestFile.js';
 
-const userLoginWithForm = document.querySelector("#user-login-form");
-console.log(userLoginWithForm);
+const userLoginInformation = document.querySelector("#user-login-form");
+console.log(userLoginInformation);
 
-userLoginWithForm.addEventListener('submit', validateUserLogin);
+userLoginInformation.addEventListener('submit', validateUserLoginInformation);
