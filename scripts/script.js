@@ -1,10 +1,9 @@
 import getProductsFromApiCall from './components/getProductsFromApiCall.js';
 import showProductsOnPage from './components/showProductsOnPage.js';
 
-import { baseUrl } from './constant/constants.js';
+import { baseUrl, productsUrl } from './constant/constants.js';
 import { indexPageHtmlContainer } from './constant/variables.js';
 
-const productsUrl = "/products";
 const url = baseUrl + productsUrl;
 const waitForProductsResult = getProductsFromApiCall(url);
 
