@@ -10,7 +10,6 @@ export default function validateUserLoginInformation() {
   const formDataOnInputs = new FormData(formElement);
   console.log(formDataOnInputs);
 
-  //Add trim so user can't enter empty string
   const userName = formDataOnInputs.get("username");
 
   const userNameInputElement = formElement[1];
