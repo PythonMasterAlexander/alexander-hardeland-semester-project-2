@@ -8,33 +8,33 @@
 </head>
 <body>
   <div class="page-wrapper login-page">
-    <form action="submit">
+    <form id="user-login-form"> <!-- action="submit" method="GET"-->
       <fieldset>
         <legend>login</legend>
         <div>
           <label for="username-input" class="form-label">username</label>
-          <input name="username" type="text" id="username-input" class="form-control" aria-describedby="if-username-wrong--show">
-          <p id="if-username-wrong--show" class="form-text"></p>
+          <input name="username" type="text" id="username-input" class="form-control" aria-describedby="if-username-wrong--show" required>
+          <p id="if-username-wrong--show" class="form-text">wrong user name</p>
         </div>
         <div>
           <label for="password-input" class="form-label">password</label>
-          <input name="password" type="text" id="password-input" class="form-control" aria-describedby="if-password-wrong--show">
-          <p id="if-password-wrong--show" class="form-text"></p>
+          <input name="password" type="text" id="password-input" class="form-control" aria-describedby="if-password-wrong--show" required>
+          <p id="if-password-wrong--show" class="form-text">wrong password</p>
         </div>
         <div>
           <a href="#"></a>
           <p>forgot password?</p>
         </div>
-        <div class="link-to-admin-page-container">
-          <a href="admin.html">login</a>
-        </div>
-        <div class="link-to-home-page-container">
-          <a href="index.html">go home</a>
+        <div class="button-to-admin-page-container">
+          <button class="btn btn-primary">login</button>
         </div>
       </fieldset>
     </form>
+    <div class="link-to-home-page-container">
+      <a href="index.html">go home</a>
+    </div>
   </div>
-  <script src="./scripts/script.js" type="module"></script>
+  <script src="./scripts/formTest.js" type="module"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
