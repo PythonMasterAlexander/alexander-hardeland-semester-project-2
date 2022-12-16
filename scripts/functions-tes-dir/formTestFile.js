@@ -15,11 +15,12 @@ export default function validateUserLoginInformation() {
 
   const username = formDataOnInputs.get("username");
   const password = formDataOnInputs.get("password");
+  console.log(formDataOnInputs);
 
   
   //--> Find out how to display a empty input box 
   if ((username.length > inputLength) && (password.length > inputLength)) {
-    //loginUser()
+    loginUser(username, password);
     
   } else {
 
@@ -27,7 +28,8 @@ export default function validateUserLoginInformation() {
       showUserLoginError(inputGroupUsername, wrongUsername, "form-text");
 
       usernameInputField.addEventListener("click", function() {
-        //Bug in code --> Attempt to login more than one time with wrong length of username will throw an error in the console 
+        //Bug in code --> Attempt to login more than one time with wrong length of username will throw an error in the console, need to find some other way 
+        //of grabbing/choosing the span element here
         //document.querySelector(".form-text").remove();
         
         usernameInputField.value = "";
@@ -51,5 +53,25 @@ export default function validateUserLoginInformation() {
 function removeInputAndErrorMessageToUser(inputField, messageElement) {
 }
 
-function loginUser(username, password) {
+async function loginUser(username, password) {
+  const urlToAuthenticate = baseUrl + productsAuth;
+
+  const userIdentifier = JSON.stringify({identifier: username, password: password});
+  console.log(userIdentifier);
+
+  const dataHeadersForLoginRequest = {
+    methode: "POST",
+    body: userIdentifier,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const response = await fetch(urlToAuthenticate, dataHeadersForLoginRequest);
+    const jsonResponse = await response.json();
+  }
+  catch(error) {
+    console.log(error);
+  }
 }
