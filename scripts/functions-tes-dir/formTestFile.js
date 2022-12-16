@@ -15,7 +15,6 @@ export default function validateUserLoginInformation() {
 
   const username = formDataOnInputs.get("username");
   const password = formDataOnInputs.get("password");
-  console.log(formDataOnInputs);
 
   
   //--> Find out how to display a empty input box 
