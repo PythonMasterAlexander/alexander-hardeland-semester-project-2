@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./dist/css/styles.css">
+  <title>Cool Cick's home page</title>
+  <script src="https://kit.fontawesome.com/b06e8bfbf3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page-wrapper login-page">
+    <form id="user-login-form"> <!-- action="submit" method="GET"-->
+      <fieldset>
+        <legend>login</legend>
+        <div class="input-group-username">
+          <label for="username-input" class="form-label">username</label>
+          <input name="username" type="text" id="username-input" class="form-control" aria-describedby="if-username-wrong--show" required>
+        </div>
+        <div class="input-group-password">
+          <label for="password-input" class="form-label">password</label>
+          <input name="password" type="text" id="password-input" class="form-control" aria-describedby="if-password-wrong--show" required>
+        </div>
+        <div>
+          <a href="#"></a>
+          <p>forgot password?</p>
+        </div>
+        <div class="button-to-admin-page-container">
+          <button class="btn btn-primary">login</button>
+        </div>
+      </fieldset>
+    </form>
+    <div class="link-to-home-page-container">
+      <a href="index.html">go home</a>
+    </div>
+  </div>
+  <script src="./scripts/formTest.js" type="module"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

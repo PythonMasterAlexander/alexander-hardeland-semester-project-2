@@ -10788,19 +10788,16 @@ body, html {
   height: 100%;
 }
 
-body {
+body, .card-payment-group__container, .login-page, .search-product-section, .search-product-section__navigation {
   display: flex;
+}
+
+body {
   flex-direction: column;
   height: 100%;
 }
 
-.search-product-section {
-  display: flex;
-}
-.search-product-section .search-product-section__navigation {
-  display: flex;
-}
-.search-product-section .search-product-section__navigation .link-container {
+.search-product-section__navigation .link-container {
   align-items: center;
   background: #1B998B;
   border-radius: 100%;
@@ -10816,8 +10813,10 @@ body {
   text-decoration: none;
 }
 
-.card-payment-group__container {
-  display: flex;
+.login-page {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page-wrapper {
@@ -10830,6 +10829,10 @@ body {
 
 .search-product-section > .search-product-section__navigation--hidden {
   display: none;
+}
+
+.form-text {
+  color: red;
 }
 
 @media (max-width: 575.98px) {
