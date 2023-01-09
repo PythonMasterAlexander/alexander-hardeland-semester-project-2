@@ -56,10 +56,9 @@ async function loginUser(username, password) {
   const urlToAuthenticate = baseUrl + productsAuth;
 
   const userIdentifier = JSON.stringify({identifier: username, password: password});
-  console.log(userIdentifier);
 
   const dataHeadersForLoginRequest = {
-    methode: "POST",
+    method: "POST",
     body: userIdentifier,
     headers: {
       "Content-Type": "application/json",
