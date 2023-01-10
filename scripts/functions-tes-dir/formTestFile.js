@@ -1,7 +1,7 @@
 import showUserLoginError from '../components/showUserLoginError.js';
 
-import { wrongPassword, wrongUsername, baseUrl, productsAuth, inputLength } from '../constant/constants.js';
-import { inputGroupPassword, inputGroupUsername } from '../constant/variables.js';
+import { baseUrl, productsAuth, inputLength, wrongLoginCredentials } from '../constant/constants.js';
+import { showErrorToUserContainer } from '../constant/variables.js';
 
 export default function validateUserLoginInformation() {
   event.preventDefault();
@@ -23,8 +23,8 @@ export default function validateUserLoginInformation() {
     
   } else {
 
-    if (username.length < inputLength) {
-      showUserLoginError(inputGroupUsername, wrongUsername, "form-text");
+    if (username.length < inputLength || password.length < inputLength) {
+      showUserLoginError(showErrorToUserContainer, wrongLoginCredentials, "form-text");
 
       usernameInputField.addEventListener("click", function() {
         //Bug in code --> Attempt to login more than one time with wrong length of username will throw an error in the console, need to find some other way 
@@ -34,17 +34,6 @@ export default function validateUserLoginInformation() {
         usernameInputField.value = "";
       }); 
     } 
-
-    if (password.length < inputLength) {
-      showUserLoginError(inputGroupPassword, wrongPassword, "form-text");
-      passwordInputField.addEventListener("click", function() {
-        //Bug in code --> Attempt to login more than one time with wrong length of password will throw an error in the console 
-        //Bug in code --> Because I use querySelector already one time, when trying again it only selects the error message from the username container
-        //document.querySelector(".form-text").remove();
-
-        passwordInputField.value = "";
-      }); 
-    }
   }
 }
 
@@ -68,8 +57,64 @@ async function loginUser(username, password) {
   try {
     const response = await fetch(urlToAuthenticate, dataHeadersForLoginRequest);
     const jsonResponse = await response.json();
+
+    console.log(jsonResponse);
+
+    if (jsonResponse.user) {
+      saveToken(jsonResponse.jwt);
+      saveUserLogin(jsonResponse.user)
+
+      location.href = "admin.html";
+    }
+
+    if (jsonResponse.error) {
+      //Add a message to user if password or username is wrong 
+      console.log(error);
+    }
   }
   catch(error) {
     console.log(error);
   }
+}
+
+const tokenKey = "token";
+const userKey = "user";
+
+function saveToken(token) {
+  getValueFromLocalStorage(tokenKey, token);
+}
+
+function getToken() {
+  return getValueFromLocalStorage(tokenKey);
+}
+
+function saveUserLogin(user) {
+  saveValueInLocalStorage(userKey, user);
+}
+
+/*
+function retriveUserNameFromLocalStorage() {
+  const userName = getValueFromLocalStorage(userKey);
+
+  if (userName) {
+    return userName.username;
+  }
+
+  return null;
+}
+*/
+
+//Save value to localStorage
+function saveValueInLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+function getValueFromLocalStorage(key) {
+  const localStorageValue = localStorage.getItem(key);
+
+  if (!localStorageValue) {
+    return [];
+  } 
+
+  return JSON.parse(value);
 }

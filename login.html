@@ -12,11 +12,13 @@
     <form id="user-login-form"> <!-- action="submit" method="GET"-->
       <fieldset>
         <legend>login</legend>
-        <div class="input-group-username">
+        <div class="show-error-to-user">
+        </div>
+        <div>
           <label for="username-input" class="form-label">username</label>
           <input name="username" type="text" id="username-input" class="form-control" aria-describedby="if-username-wrong--show" required>
         </div>
-        <div class="input-group-password">
+        <div>
           <label for="password-input" class="form-label">password</label>
           <input name="password" type="text" id="password-input" class="form-control" aria-describedby="if-password-wrong--show" required>
         </div>
