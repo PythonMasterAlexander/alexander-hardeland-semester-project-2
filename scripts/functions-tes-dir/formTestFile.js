@@ -58,12 +58,63 @@ async function loginUser(username, password) {
     const response = await fetch(urlToAuthenticate, dataHeadersForLoginRequest);
     const jsonResponse = await response.json();
 
-    if(jsonResponse.error) {
+    console.log(jsonResponse);
+
+    if (jsonResponse.user) {
+      saveToken(jsonResponse.jwt);
+      saveUserLogin(jsonResponse.user)
+
+      location.href = "admin.html";
+    }
+
+    if (jsonResponse.error) {
+      //Add a message to user if password or username is wrong 
       console.log(error);
     }
-    console.log(jsonResponse);
   }
   catch(error) {
     console.log(error);
   }
+}
+
+const tokenKey = "token";
+const userKey = "user";
+
+function saveToken(token) {
+  getValueFromLocalStorage(tokenKey, token);
+}
+
+function getToken() {
+  return getValueFromLocalStorage(tokenKey);
+}
+
+function saveUserLogin(user) {
+  saveValueInLocalStorage(userKey, user);
+}
+
+/*
+function retriveUserNameFromLocalStorage() {
+  const userName = getValueFromLocalStorage(userKey);
+
+  if (userName) {
+    return userName.username;
+  }
+
+  return null;
+}
+*/
+
+//Save value to localStorage
+function saveValueInLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+function getValueFromLocalStorage(key) {
+  const localStorageValue = localStorage.getItem(key);
+
+  if (!localStorageValue) {
+    return [];
+  } 
+
+  return JSON.parse(value);
 }
