@@ -1,4 +1,4 @@
-const createHtmlElement= function(parentElement, content, element) {
+const createHtmlElement = function(parentElement, content, element) {
   const divElement = document.createElement(element);
 
   divElement.innerText = content;

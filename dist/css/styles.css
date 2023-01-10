@@ -10769,6 +10769,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.admin-page a {
+  padding-right: 20px;
+}
+
 .nav-link {
   text-transform: uppercase;
   font-weight: bold;
