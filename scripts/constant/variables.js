@@ -5,6 +5,7 @@ export const showErrorToUserContainer = document.querySelector(".show-error-to-u
 export const errorMessageContainer = document.querySelector(".container-error-message");
 
 export const dynamicMenuContainer = document.querySelector(".dynamic-header-container");
+export const logoutButton = document.querySelector("#logout-button");
 
 export const attributesOnErrorMessage = {
   alertClass: "alert",

@@ -1,11 +1,9 @@
 import { tokenKey, userKey } from '../constant/constants.js';
 
-//Save value to local storage
 function saveValueInLocalStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
-//Then call this function and save user token in local storage
 export function saveUserLoginToken(token) {
   saveValueInLocalStorage(tokenKey, token);
 }
@@ -14,7 +12,6 @@ export function getTokenFromStorage() {
   return getValueFromLocalStorage(tokenKey);
 }
 
-//Save user
 export function saveUserLogin(user) {
   saveValueInLocalStorage(userKey, user);
 }
@@ -28,7 +25,6 @@ function getValueFromLocalStorage(key) {
   return JSON.parse(localStorageValue);
 }
 
-//Get the username from local storage
 export function getEmailLoginFromLocalStorage() {
   const userLoginValue = getValueFromLocalStorage(userKey);
 
@@ -36,4 +32,8 @@ export function getEmailLoginFromLocalStorage() {
     return userLoginValue.email;
   }
   return null;
+}
+
+export function clearLocalStorage() {
+  localStorage.clear()
 }

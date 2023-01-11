@@ -10769,7 +10769,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.admin-page a, .edit-page a, .delete-page a {
+.admin-page a, .edit-page a, .add-page a {
   padding-right: 20px;
 }
 

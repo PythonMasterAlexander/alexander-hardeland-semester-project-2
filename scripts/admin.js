@@ -1,5 +1,4 @@
-import adminPagesNavigationMenu from './components/adminPagesNavigationMenu.js';
+import { default as addAdminPageMenu } from './components/adminPagesNavigationMenu.js';
 
-adminPagesNavigationMenu();
-
+addAdminPageMenu();
 
