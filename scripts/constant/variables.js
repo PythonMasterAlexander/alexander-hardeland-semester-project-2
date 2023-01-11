@@ -4,7 +4,7 @@ export const containerForErrorMessage = document.querySelector(".container-for-e
 export const showErrorToUserContainer = document.querySelector(".show-error-to-user");
 export const errorMessageContainer = document.querySelector(".container-error-message");
 
-export const dynamicMenuContainer = document.querySelector("#dynamic-header-container");
+export const dynamicMenuContainer = document.querySelector(".dynamic-header-container");
 
 export const attributesOnErrorMessage = {
   alertClass: "alert",

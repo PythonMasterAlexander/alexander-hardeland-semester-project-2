@@ -10769,8 +10769,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.admin-page a {
+.admin-page a, .edit-page a, .delete-page a {
   padding-right: 20px;
+}
+
+.admin-pages-active-link {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.admin-pages-none-active-link {
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .nav-link {

@@ -9,4 +9,7 @@ export const inputLength = 2;
 
 export const wrongLoginCredentials = "username or password are wrong";
 
+export const tokenKey = "token";
+export const userKey = "user";
+
 
