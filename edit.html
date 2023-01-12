@@ -17,30 +17,26 @@
         <fieldset>
           <div>
             <label for="title" class="form-label">add title</label>
-            <input name="add-title" type="text" class="form-control" id="title">
+            <input name="title" type="text" class="form-control" id="title">
           </div>
           <div>
             <label for="price" class="form-label">add price</label>
-            <input name="add-price" type="number" class="form-control" id="price">
+            <input name="price" type="number" class="form-control" id="price">
           </div>
           <div>
             <label for="upload-image" class="form-label">upload image</label>
-            <input name="password" type="text" class="form-control" id="upload-image">
-          </div>
-          <div>
+            <input name="image" type="text" class="form-control" id="upload-image">
             <button>check if image is featured</button>
           </div>
-          <div class="link-to-admin-container">
-            <a href="admin.html" class="btn btn-primary">admin</a>
+          <div class="delete-button-container">
+            <button id="delete-button">confirm</button>
           </div>
-          <div>
-            <div class="confirm-to-delete-container">
-              <button>confirm</button>
-            </div>
             <!--Create a message to user asking if they are sure if they want to delete-->
-          </div>
         </fieldset>
       </form>
+      <div class="link-to-admin-container">
+        <a href="admin.html" class="btn btn-primary">admin</a>
+      </div>
     </main>
   </div> 
   <script src="./scripts/admin.js" type="module"></script>

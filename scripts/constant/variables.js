@@ -4,9 +4,10 @@ export const containerForErrorMessage = document.querySelector(".container-for-e
 export const showErrorToUserContainer = document.querySelector(".show-error-to-user");
 export const errorMessageContainer = document.querySelector(".container-error-message");
 
-export const dynamicMenuContainer = document.querySelector(".dynamic-header-container");
-export const logoutButton = document.querySelector("#logout-button");
+export const deleteButton = document.querySelector("#delete-button");
+export const addProductsForm = document.querySelector("#add-products-form");
 
+export const dynamicMenuContainer = document.querySelector(".dynamic-header-container");
 export const attributesOnErrorMessage = {
   alertClass: "alert",
   warningClass: "alert-warning",

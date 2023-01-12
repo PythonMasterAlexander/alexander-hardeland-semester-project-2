@@ -1,8 +1,5 @@
 import { dynamicMenuContainer } from '../constant/variables.js';
-import { getEmailLoginFromLocalStorage } from './localStorageComponents.js';
-
-function addProductsToApi() {
-}
+import { getUserNameInLocalStorage } from './localStorageComponents.js';
 
 function deleteProductsFromApi() {
 }
@@ -13,23 +10,21 @@ export default function adminPagesNavigationMenu() {
 
   const loginPage = adminPage.cloneNode(false);
   const editPage = adminPage.cloneNode(false);
-
   const addPage = adminPage.cloneNode(false);
-  logoutButton.appendChild(document.createTextNode("logout"));
 
   logoutButton.setAttribute("id", "logout-button");
+  logoutButton.appendChild(document.createTextNode("logout"));
 
   const { pathname } = document.location;
-  const loginUserName = getEmailLoginFromLocalStorage();
+  const loginUserName = getUserNameInLocalStorage();
 
   loginPage.setAttribute("href", "login.html");
-  loginPage.classList.add(`${pathname === "/login.html" ? "admin-pages-active-link" : "admin-pages-none-active-link"}`);
-  let ifUserLogedIn = loginPage; 
 
+  let ifUserLogedIn = loginPage; 
   if (loginUserName) {
     ifUserLogedIn.setAttribute("href", "/admin.html");
-    ifUserLogedIn.appendChild(document.createTextNode(`Welcome ${loginUserName}`));
 
+    ifUserLogedIn.appendChild(document.createTextNode(`User: ${loginUserName}`));
     loginPage.classList.add(`${pathname === "/admin.html" ? "admin-pages-active-link" : "admin-pages-none-active-link"}`);
   }
 
@@ -41,5 +36,5 @@ export default function adminPagesNavigationMenu() {
   addPage.appendChild(document.createTextNode("add"));
   addPage.classList.add(`${pathname === "/add.html" ? "admin-pages-active-link" : "admin-pages-none-active-link"}`);
 
-  dynamicMenuContainer.append(loginPage, logoutButton, adminPage, editPage, addPage);
+  return dynamicMenuContainer.append(loginPage, logoutButton, adminPage, editPage, addPage);
 }

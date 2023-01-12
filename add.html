@@ -12,9 +12,28 @@
     <header class="dynamic-header-container">
     </header>
     <main>
-      <h1>delete products</h1>
-      <form >
+      <h1>add products</h1>
+      <form id="add-products-form">
         <fieldset>
+          <div>
+            <label for="title" class="form-label">add title</label>
+            <input name="title" type="text" class="form-control" id="title">
+          </div>
+          <div>
+            <label for="price" class="form-label">add price</label>
+            <input name="price" type="text" class="form-control" id="price">
+          </div>
+          <div>
+            <label for="description" class="form-label">add description</label>
+            <input name="description" type="text" class="form-control" id="description">
+          </div>
+          <div>
+            <label for="upload-image" class="form-label">upload image url</label>
+            <input name="image" type="url" class="form-control" id="upload-image">
+          </div>
+          <div class="submit-products-button-container">
+            <button id="add-products-button">confirm</button>
+          </div>
         </fieldset>
       </form>
       <div class="link-to-admin-container">

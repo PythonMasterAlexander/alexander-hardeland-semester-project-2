@@ -25,7 +25,7 @@ function getValueFromLocalStorage(key) {
   return JSON.parse(localStorageValue);
 }
 
-export function getEmailLoginFromLocalStorage() {
+export function getUserNameInLocalStorage() {
   const userLoginValue = getValueFromLocalStorage(userKey);
 
   if (userLoginValue) {
