@@ -1,8 +1,5 @@
-import { baseUrl, productsUrl } from '../constant/constants.js';
-import { addProductsForm } from '../constant/variables.js';
+import { addProductsForm, url } from '../constant/variables.js';
 import { getTokenFromStorage } from './localStorageComponents.js';
-
-const url = baseUrl + productsUrl;
 
 export default function submitProductToApi() {
   event.preventDefault();
@@ -58,10 +55,3 @@ async function addProductToApi(dataToSendToApi, userToken, url) {
     return error;
   }
 }
-
-
-
-
-
-
-
