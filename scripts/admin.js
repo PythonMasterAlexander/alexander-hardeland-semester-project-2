@@ -6,14 +6,3 @@ import { addProductsForm } from './constant/variables.js';
 
 addAdminPageMenu();
 addProductsForm.addEventListener("submit", submitProductToApi);
-
-/*
-{
-  "title": "test",
-  "description": "test description",
-  "price": 5,
-  "image": "something.jgp",
-  "image_url": "chrome://branding/content/firefox-wordmark.svg",
-  "featured": false
-}
-*/

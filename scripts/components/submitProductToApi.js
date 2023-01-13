@@ -1,19 +1,18 @@
 import { baseUrl, productsUrl } from '../constant/constants.js';
 import { addProductsForm } from '../constant/variables.js';
+import { getTokenFromStorage } from './localStorageComponents.js';
 
 const url = baseUrl + productsUrl;
 
 export default function submitProductToApi() {
   event.preventDefault();
+
   const formProperties = new FormData(addProductsForm);
 
   const title = formProperties.get("title");
-
   let price = formProperties.get("price");
-  //Check if price is NaN
 
   const description = formProperties.get("description");
-
   const image = formProperties.get("image");
 
   if ((title <= 0) || (isNaN(price)) || (description <= 0)) {
@@ -23,52 +22,40 @@ export default function submitProductToApi() {
     console.log("working" + isNaN(price));
   }
 
+  const apiData = {
+    title: title,
+    price: price,
+    description: description,
+    image_url: image
+  };
 
-  //Use the add product function
-  //addProductToApi(title, price, description, image, url);
+  const userToken = getTokenFromStorage();
+  addProductToApi(apiData, userToken, url);
 }
 
-async function addProductToApi(title, price, description, image, url) {
-  const apiUrl = url;
-  let apiToken;
+async function addProductToApi(dataToSendToApi, userToken, url) {
   let outputError;
-  let apiData;
-
-  const dataToSendToApi = JSON.stringify(
-    {
-      title: title,
-      price: price,
-      description: description,
-      image: image
-    }
-  );
 
   const dataHeadersForLoginRequest = {
     method: "POST",
-    body: dataToSendToApi,
+    body: JSON.stringify(dataToSendToApi),
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${apiToken}` 
-    },
+      Authorization: `Bearer ${userToken}` 
+    }
   };
   
-  if (!apiUrl) {
-    return outputError = "Wrong api address provided";
-  } else {
+  try {
+    const response = await fetch(url, dataHeadersForLoginRequest);
+    const returnJson = await response.json();
 
-    try {
-      const response = await fetch(apiUrl, dataToSendToApi);
-      if (response.ok) {
-        apiData = await response.json();
+    //Create two if statements to see if products have been create using returnJson.created_att
+    //The other one checks if the returnJson returns a error. If display a error message to the user
 
-      } else {
-        outputError = `Unresponsive API call: Status: ${response.status}`;
-      }
-    }
-    catch(error) {
-      outputError = error;
-    }
-    return { outputError, apiData };
+  } catch(error) {
+    console.log(error);
+    //return a display error message to the user
+    return error;
   }
 }
 

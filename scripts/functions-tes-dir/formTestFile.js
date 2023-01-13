@@ -1,5 +1,5 @@
 import showUserLoginError from '../components/showUserLoginError.js';
-import { saveUserLoginToken, getTokenFromStorage, saveUserLogin } from '../components/localStorageComponents.js';
+import { saveUserLoginToken, saveUserLogin } from '../components/localStorageComponents.js';
 
 import { baseUrl, productsAuth, inputLength, wrongLoginCredentials, tokenKey, userKey } from '../constant/constants.js';
 import { showErrorToUserContainer } from '../constant/variables.js';
