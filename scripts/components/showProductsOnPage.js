@@ -14,7 +14,9 @@ const showProductsOnPage = function(products) {
     
   } else {
     return apiDataProduct.map(product => {
-      createHtmlElement(indexPageHtmlContainer, product.id, divElement);
+      if (!product.featured) {
+        createHtmlElement(indexPageHtmlContainer, product, divElement);
+      } 
     });
   }
 };
