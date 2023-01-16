@@ -42,9 +42,16 @@
         </nav>
       </header>
       <main class="products-page container">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div class="input-group">
+          <span class="input-group-text">Filter</span>
+          <input id="filter-input-field" type="text" class="form-control">
         </div>
+        <section class="container-lg">
+          <div class="row">
+            <div class="col card-container">
+            </div>
+          </div>
+        </section>
       </main>
     </div> 
     <footer>
@@ -72,7 +79,7 @@
         <a href="login.html">login</a>
       </section>
     </footer>
-    <script src="./scripts/script.js" type="module"></script>
+    <script src="./scripts/cart.js" type="module"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
