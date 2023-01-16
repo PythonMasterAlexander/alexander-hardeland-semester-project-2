@@ -8,5 +8,4 @@ const url = baseUrl + productsUrl;
 const waitForProductsResult = getProductsFromApiCall(url);
 
 waitForProductsResult.then(showProductsOnPage);
-//Remember the featured is set to either true or false, there are a task in the assignment associated with this
 
