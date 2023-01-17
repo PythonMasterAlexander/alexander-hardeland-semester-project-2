@@ -5,5 +5,19 @@ import { indexPageHtmlContainer, url } from './constant/variables.js';
 
 const waitForProductsResult = getProductsFromApiCall(url);
 waitForProductsResult.then(showProductsOnPage);
-//Remember the featured is set to either true or false, there are a task in the assignment associated with this
+
+
+
+
+
+/*
+return cardContainerElement.innerHTML += `<div class="card">
+                                            <img src"${products.image_url}">
+                                            <hgroup class="card-body">
+                                              <h2>${products.title}</h2>
+                                              <p>${products.price}</p>
+                                              <a href="product.html" class="btn btn-primary">to product</a>
+                                            </hgroup>
+                                          </div>`;
+*/
 

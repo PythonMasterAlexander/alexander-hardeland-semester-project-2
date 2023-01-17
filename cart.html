@@ -28,30 +28,26 @@
                 </li>
               </ul>
             </div>
+            <section class="search-product-section">
+              <nav class="search-product-section__navigation">
+                <div class="link-container">
+                  <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-duotone fa-lg"></i></a>
+                </div>
+                <div class="link-container">
+                  <a href="login.html"><i class="fa-solid fa-right-to-bracket fa-duotone fa-lg"></i></a>
+                </div>
+              </nav>
+            </section>
           </div>
         </nav>
       </header>
       <main class="container">
-        <section class="search-product-section">
-          <section class="cart-navigation-section">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page"><a href="cart.html">cart</a></li>
-                <li class="breadcrumb-item"><a href="#">checkout</a></li>
-              </ol>
-            </nav>
-          </section>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="search">Search</button>
-          </form>
-          <nav class="search-product-section__navigation--hidden">
-            <div class="link-container">
-              <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-duotone fa-lg"></i></a>
-            </div>
-            <div class="link-container">
-              <a href="login.html"><i class="fa-solid fa-right-to-bracket fa-duotone fa-lg"></i></a>
-            </div>
+        <section class="cart-navigation-section">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page"><a href="cart.html">cart</a></li>
+              <li class="breadcrumb-item"><a href="#">checkout</a></li>
+            </ol>
           </nav>
         </section>
         <section class="cart-section">
@@ -59,47 +55,35 @@
             <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
           </div>
           <h1>your shopping cart</h1>
+          <div class="if-cart-empty-container">
+            if cart empty display a message here
+          </div>
           <section class="container-lg">
             <div class="row">
               <div class="col">
-                <div class="card mb-4">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-body">
-                      <hgroup>
-                        <h2>shoe</h2>
-                        <p>shoe size</p>
-                        <p>price</p>
-                      </hgroup>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-4">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-body">
-                      <hgroup>
-                        <h2>shoe</h2>
-                        <p>shoe size</p> 
-                        <p>price</p>
-                      </hgroup>
-                    </div>
-                  </div>
-                </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </section>
         </section>
-        <div class="card">
-          <div class="card-body">
-            <div class="link-to-checkout-page-container">
-              <a href="#">to checkout</a>
-            </div>
-          </div>
+        <div class="link-to-checkout-page-container">
+          <a href="#">to checkout</a>
         </div>
         <div class="link-to-product-page-container">
           <a href="product.html">back to shopping</a>
@@ -134,7 +118,7 @@
         <a href="login.html">login</a>
       </div>
     </footer>
-    <script src="./scripts/script.js" type="module"></script>
+    <script src="./scripts/cart.js" type="module"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
