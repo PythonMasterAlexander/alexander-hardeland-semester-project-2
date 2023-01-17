@@ -15,6 +15,9 @@ export const contentInQueryString = document.location.search;
 export const url = baseUrl + productsUrl;
 export const addEditForm = document.querySelector("#edit-page-form");
 
+export const cardContainerElement = document.querySelector(".card-container");
+export const filterInputField = document.querySelector("#filter-input-field");
+
 export const attributesOnErrorMessage = {
   alertClass: "alert",
   warningClass: "alert-warning",

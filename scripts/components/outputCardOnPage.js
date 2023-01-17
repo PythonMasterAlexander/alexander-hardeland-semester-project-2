@@ -16,10 +16,10 @@ export function createCheckBox(id, name) {
 
 export default function outputCardOnPage(id, title, price, image, pageAddress) {
   const cardParent = document.createElement("div");
-  cardParent.setAttribute("class", "card");
+  cardParent.classList.add("card");
 
   const cardBody = document.createElement("hgroup");
-  cardBody.setAttribute("class", "card-body");
+  cardBody.classList.add("card-body");
 
   const titleElement = document.createElement("h2");
   titleElement.append(document.createTextNode(title));
@@ -34,8 +34,8 @@ export default function outputCardOnPage(id, title, price, image, pageAddress) {
 
   const button = document.createElement("a");
   button.append(document.createTextNode(("Check out product")));
-  button.setAttribute("class", "btn btn-primary");
-  button.setAttribute("href", `${pageAddress}`);
+  button.classList.add("btn", "btn-primary", "product-button")
+  //button.setAttribute("href", `${pageAddress}`);
 
   cardBody.append(titleElement, priceElement, checkBoxElement, button);
   cardParent.append(imageElement, cardBody);

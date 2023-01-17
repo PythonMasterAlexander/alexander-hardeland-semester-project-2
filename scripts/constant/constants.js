@@ -15,4 +15,5 @@ export const tokenKey = "token";
 export const userKey = "user";
 
 export const productPagePath = "./product.html";
+export const productKey = "products";
 
