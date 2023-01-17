@@ -55,9 +55,29 @@
             <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
           </div>
           <h1>your shopping cart</h1>
+          <div class="if-cart-empty-container">
+            if cart empty display a message here
+          </div>
           <section class="container-lg">
             <div class="row">
-              <div class="col card-container">
+              <div class="col">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </section>
@@ -98,7 +118,7 @@
         <a href="login.html">login</a>
       </div>
     </footer>
-    <script src="./scripts/script.js" type="module"></script>
+    <script src="./scripts/cart.js" type="module"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
