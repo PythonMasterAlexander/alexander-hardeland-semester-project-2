@@ -4,6 +4,7 @@ import { productPagePath } from './constant/constants.js';
 import { url } from './constant/variables.js';
 import { getValueFromLocalStorage, saveValueInLocalStorage } from './components/localStorageComponents.js';
 
+const productKey = "products";
 const cardContainerElement = document.querySelector(".card-container");
 const filterInputField = document.querySelector("#filter-input-field");
 
@@ -30,11 +31,22 @@ checkBoxes.forEach((checkBox) => {
     const dataId = this.dataset.id;
     const dataName = this.dataset.name;
 
-    const productsChecked = { id: dataId, name: dataName };
+    const currentProductInStorage = getValueFromLocalStorage(productKey);
 
-    const currentProductInStorage = getValueFromLocalStorage(dataId);
-    currentProductInStorage.push(productsChecked);
-    saveValueInLocalStorage(dataId, dataName);
+    const ifProductExist = currentProductInStorage.find(product => {
+      return product.id === dataId;
+    })
+
+    if (!ifProductExist) {
+      const product = { id: dataId, name: dataName };
+      currentProductInStorage.push(product);
+
+      saveValueInLocalStorage(productKey, currentProductInStorage);
+
+    } else {
+      const newProductInStorage = currentProductInStorage.filter(product => product.id !== dataId);
+      saveValueInLocalStorage(productKey, newProductInStorage);
+    }
   });
 });
 
