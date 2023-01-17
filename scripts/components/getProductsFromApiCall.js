@@ -1,7 +1,7 @@
 const getProductsFromApiCall = async function(url) {
   let apiData, outputError;
 
-  if (!url){
+  if (!url) {
     return outputError = "Wrong URL address provided";
   } else {
 
@@ -20,5 +20,5 @@ const getProductsFromApiCall = async function(url) {
     }
     return { apiData, outputError };
   }
-};
+}
 export default getProductsFromApiCall;
