@@ -10769,6 +10769,18 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.admin-page a, .edit-page a, .add-page a {
+  padding-right: 20px;
+}
+
+.admin-pages-active-link {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.admin-pages-none-active-link {
+  color: rgba(0, 0, 0, 0.55);
+}
+
 .nav-link {
   text-transform: uppercase;
   font-weight: bold;
