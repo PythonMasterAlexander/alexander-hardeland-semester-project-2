@@ -14,4 +14,5 @@ export const wrongLoginCredentials = "username or password are wrong";
 export const tokenKey = "token";
 export const userKey = "user";
 
+export const productPagePath = "./product.html";
 

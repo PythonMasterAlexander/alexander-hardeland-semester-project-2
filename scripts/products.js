@@ -1,28 +1,45 @@
 import outputCardOnPage from './components/outputCardOnPage.js';
-const cardContainerElement = document.querySelector(".card-container");
 import getProductsFromApiCall from './components/getProductsFromApiCall.js';
-const url = "http://localhost:1337/products";
+import { productPagePath } from './constant/constants.js';
+import { url } from './constant/variables.js';
+import { getValueFromLocalStorage, saveValueInLocalStorage } from './components/localStorageComponents.js';
+
+const cardContainerElement = document.querySelector(".card-container");
 const filterInputField = document.querySelector("#filter-input-field");
 
 const getApiData = await getProductsFromApiCall(url);
 let productsToFilter = getApiData.apiData;
 
-
 function outputProductsOnPage(products) {
   const listOfProducts = products.apiData;
   //cardContainerElement.innerHTML = "";
 
-  //Something is happening here 
+  //Something is happening here, the listOfProducts is undefined when generating a new list in the event listener 
   listOfProducts.forEach(function(products) {
-    const { title, price, imageUrl } = products;
-    return cardContainerElement.append(outputCardOnPage(title, price, "", "/"));
+    const { id, title, price, imageUrl } = products;
+    return cardContainerElement.append(outputCardOnPage(id, title, price, "", productPagePath));
   });
 }
 
 outputProductsOnPage(getApiData);
 
+const checkBoxes = document.querySelectorAll("#check-product");
+checkBoxes.forEach((checkBox) => {
+  checkBox.addEventListener("click", function() {
+    const isBoxChecked = this.checked
+    const dataId = this.dataset.id;
+    const dataName = this.dataset.name;
+
+    const productsChecked = { id: dataId, name: dataName };
+
+    const currentProductInStorage = getValueFromLocalStorage(dataId);
+    currentProductInStorage.push(productsChecked);
+    saveValueInLocalStorage(dataId, dataName);
+  });
+});
+
 filterInputField.addEventListener("keyup", function() {
-  const filterKeyValue = event.target.value.trim().toLowerCase();
+  const filterKeyValue = this.value.trim().toLowerCase();
   //const apiData = getApiData.apiData;
 
   const filteredProducts = productsToFilter.filter(function(data) {

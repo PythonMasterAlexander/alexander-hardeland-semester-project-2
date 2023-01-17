@@ -1,6 +1,6 @@
 import { tokenKey, userKey } from '../constant/constants.js';
 
-function saveValueInLocalStorage(key, value) {
+export function saveValueInLocalStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
@@ -16,7 +16,7 @@ export function saveUserLogin(user) {
   saveValueInLocalStorage(userKey, user);
 }
 
-function getValueFromLocalStorage(key) {
+export function getValueFromLocalStorage(key) {
   const localStorageValue = localStorage.getItem(key);
 
   if (!localStorageValue) {
