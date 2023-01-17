@@ -1,3 +1,5 @@
+export const idIdentifier = "id";
+
 export const baseUrl = "http://localhost:1337";
 export const errorHeading = "h3"; 
 
@@ -8,5 +10,8 @@ export const productsAuth = "/auth/local";
 export const inputLength = 2;
 
 export const wrongLoginCredentials = "username or password are wrong";
+
+export const tokenKey = "token";
+export const userKey = "user";
 
 

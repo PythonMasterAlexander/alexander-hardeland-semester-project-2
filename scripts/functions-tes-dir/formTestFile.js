@@ -1,6 +1,7 @@
 import showUserLoginError from '../components/showUserLoginError.js';
+import { saveUserLoginToken, saveUserLogin } from '../components/localStorageComponents.js';
 
-import { baseUrl, productsAuth, inputLength, wrongLoginCredentials } from '../constant/constants.js';
+import { baseUrl, productsAuth, inputLength, wrongLoginCredentials, tokenKey, userKey } from '../constant/constants.js';
 import { showErrorToUserContainer } from '../constant/variables.js';
 
 export default function validateUserLoginInformation() {
@@ -58,63 +59,19 @@ async function loginUser(username, password) {
     const response = await fetch(urlToAuthenticate, dataHeadersForLoginRequest);
     const jsonResponse = await response.json();
 
-    console.log(jsonResponse);
-
     if (jsonResponse.user) {
-      saveToken(jsonResponse.jwt);
+      saveUserLoginToken(jsonResponse.jwt);
       saveUserLogin(jsonResponse.user)
+      console.log(jsonResponse);
 
       location.href = "admin.html";
     }
 
     if (jsonResponse.error) {
       //Add a message to user if password or username is wrong 
-      console.log(error);
     }
   }
   catch(error) {
     console.log(error);
   }
-}
-
-const tokenKey = "token";
-const userKey = "user";
-
-function saveToken(token) {
-  getValueFromLocalStorage(tokenKey, token);
-}
-
-function getToken() {
-  return getValueFromLocalStorage(tokenKey);
-}
-
-function saveUserLogin(user) {
-  saveValueInLocalStorage(userKey, user);
-}
-
-/*
-function retriveUserNameFromLocalStorage() {
-  const userName = getValueFromLocalStorage(userKey);
-
-  if (userName) {
-    return userName.username;
-  }
-
-  return null;
-}
-*/
-
-//Save value to localStorage
-function saveValueInLocalStorage(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
-}
-
-function getValueFromLocalStorage(key) {
-  const localStorageValue = localStorage.getItem(key);
-
-  if (!localStorageValue) {
-    return [];
-  } 
-
-  return JSON.parse(value);
 }
