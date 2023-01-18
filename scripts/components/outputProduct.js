@@ -1,3 +1,19 @@
+export function createCheckBox(id, name) {
+  const containerElement = document.createElement("div");
+  const inputElement = document.createElement("input");
+
+  containerElement.classList.add("form-check");
+  inputElement.classList.add("form-check-input");
+
+  inputElement.setAttribute("type", "checkbox");
+  inputElement.setAttribute("id", "check-product");
+  inputElement.setAttribute("data-id", id);
+  inputElement.setAttribute("data-name", name);
+
+  containerElement.append(inputElement);
+  return containerElement;
+}
+
 export default function outputProduct(data, productContainer) {
   const apiData = data.apiData; 
   const { id, title, description, image_url, price } = apiData;
@@ -13,21 +29,12 @@ export default function outputProduct(data, productContainer) {
   const paragraphElement = document.createElement("p");
   paragraphElement.append(document.createTextNode(price));
 
-  const checkBoxContainer = cardContainer.cloneNode(false);
-  const checkBoxElement = document.createElement("input");
-  checkBoxContainer.classList.add("form-check") 
-
-  checkBoxElement.classList.add("form-check-input");
-  checkBoxElement.setAttribute("type", "checkbox");
-
-  checkBoxElement.setAttribute("id", "check-product");
-  checkBoxElement.setAttribute("data-id", id);
-
-  checkBoxElement.setAttribute("data-name", title);
+  const checkBoxContainer = createCheckBox(id, title);
+  
   //Nb remember to set src attribute ${image_url}
   imageElement.setAttribute("src", ``);
 
-  checkBoxContainer.append(checkBoxElement);
+  //checkBoxContainer.append(checkBoxElement);
   groupElement.append(headingTwoElement, paragraphElement)
   cardContainer.append(imageElement, groupElement, checkBoxContainer);
 

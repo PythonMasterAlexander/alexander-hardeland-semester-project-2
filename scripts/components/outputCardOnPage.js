@@ -1,20 +1,4 @@
-export function createCheckBox(id, name) {
-  const containerElement = document.createElement("div");
-  const inputElement = document.createElement("input");
-
-  containerElement.classList.add("form-check");
-  inputElement.classList.add("form-check-input");
-
-  inputElement.setAttribute("type", "checkbox");
-  inputElement.setAttribute("id", "check-product");
-  inputElement.setAttribute("data-id", id);
-  inputElement.setAttribute("data-name", name);
-
-  containerElement.append(inputElement);
-  return containerElement;
-}
-
-export default function outputCardOnPage(id, title, price, image, pageAddress) {
+export default function outputCardOnPage(title, price, image, pageAddress) {
   const cardParent = document.createElement("div");
   cardParent.classList.add("card");
 
@@ -30,14 +14,13 @@ export default function outputCardOnPage(id, title, price, image, pageAddress) {
   const imageElement = document.createElement("img");
   imageElement.setAttribute("src", `${image}`);
 
-  const checkBoxElement = createCheckBox(id, title);
-
   const button = document.createElement("a");
   button.append(document.createTextNode(("Check out product")));
+
   button.classList.add("btn", "btn-primary", "product-button")
   button.setAttribute("href", `${pageAddress}`);
 
-  cardBody.append(titleElement, priceElement, checkBoxElement, button);
+  cardBody.append(titleElement, priceElement, button);
   cardParent.append(imageElement, cardBody);
   
   return cardParent;
