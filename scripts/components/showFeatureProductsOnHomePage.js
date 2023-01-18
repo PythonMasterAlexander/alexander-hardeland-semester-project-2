@@ -1,21 +1,21 @@
-import createHtmlElement from './createHtmlElement.js';
-import  errorMessageToUser from '../utilities/errorMessageToUser.js';
+import outputFeatureProductsOnHomePage from './outputFeatureProductsOnHomePage.js';
+import errorMessageToUser from '../utilities/errorMessageToUser.js';
 import addErrorStyleOnProvidedContainer from '../utilities/addErrorStyleOnProvidedContainer.js';
 
 import { errorHeading, divElement } from '../constant/constants.js';
 import { indexPageHtmlContainer, errorMessageContainer, attributesOnErrorMessage } from '../constant/variables.js';
 
-const showProductsOnPage = function(products) {
-  const errorFromApiCall = products.outputError;
+const showFeatureProductsOnHomePage = function(products) {
   const apiDataProduct = products.apiData;
+  const errorFromApiCall = products.outputError;
 
   if (errorFromApiCall) {
     return errorMessageToUser(addErrorStyleOnProvidedContainer(errorMessageContainer), errorFromApiCall);
-    
+
   } else {
     return apiDataProduct.map(product => {
-      createHtmlElement(indexPageHtmlContainer, product.id, divElement);
+      outputFeatureProductsOnHomePage(indexPageHtmlContainer, product.id, divElement);
     });
   }
 };
-export default showProductsOnPage; 
+export default showFeatureProductsOnHomePage;
