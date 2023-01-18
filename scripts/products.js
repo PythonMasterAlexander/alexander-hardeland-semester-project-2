@@ -14,7 +14,7 @@ function outputProductsOnPage(products) {
   //Something is happening here, the listOfProducts is undefined when generating a new list in the event listener 
   listOfProducts.forEach(function(products) {
     const { id, title, price, imageUrl } = products;
-    return cardContainerElement.append(outputCardOnPage(id, title, price, "", "."));
+    return cardContainerElement.append(outputCardOnPage(id, title, price, "", `${productPagePath + id}`));
   });
 }
 
@@ -42,12 +42,10 @@ filterInputField.addEventListener("keyup", function() {
 
 //To go to product page when clicking one of the products. The product you click must show in the product page
 const checkOutProductButton = document.querySelectorAll(".product-button");
-console.log(checkOutProductButton);
 
 checkOutProductButton.forEach((button) => {
   button.addEventListener("click", function() {
-    console.log(this);
-    this.href = "product.html";
+  console.log(getApiData);
   });
 })
 

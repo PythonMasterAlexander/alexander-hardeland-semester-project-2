@@ -18,6 +18,8 @@ export const addEditForm = document.querySelector("#edit-page-form");
 export const cardContainerElement = document.querySelector(".card-container");
 export const filterInputField = document.querySelector("#filter-input-field");
 
+export const productPageContainer = document.querySelector(".card-container-product-page");
+
 export const attributesOnErrorMessage = {
   alertClass: "alert",
   warningClass: "alert-warning",

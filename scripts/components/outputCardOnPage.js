@@ -35,7 +35,7 @@ export default function outputCardOnPage(id, title, price, image, pageAddress) {
   const button = document.createElement("a");
   button.append(document.createTextNode(("Check out product")));
   button.classList.add("btn", "btn-primary", "product-button")
-  //button.setAttribute("href", `${pageAddress}`);
+  button.setAttribute("href", `${pageAddress}`);
 
   cardBody.append(titleElement, priceElement, checkBoxElement, button);
   cardParent.append(imageElement, cardBody);

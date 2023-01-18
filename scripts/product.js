@@ -1,18 +1,20 @@
+import outputProduct from './components/outputProduct.js';
+import getProductsFromApiCall from './components/getProductsFromApiCall.js';
+
 import { productKey } from './constant/constants.js';
+import { url, productPageContainer } from './constant/variables.js';
 import { getValueFromLocalStorage } from './components/localStorageComponents.js';
 
+const productQueryString = document.location.search;
+const productParameter = new URLSearchParams(productQueryString);
+const id = productParameter.get("id");
+const getApiData = await getProductsFromApiCall(url + id);
 
-
-
-
-
-
-
-
+outputProduct(getApiData, productPageContainer);
 
 //This is the add to cart code
 const productsInLocalStorage = getValueFromLocalStorage(productKey);
-console.log(productsInLocalStorage);
+//console.log(productsInLocalStorage);
 const checkBoxes = document.querySelectorAll("#check-product");
 checkBoxes.forEach((checkBox) => {
   checkBox.addEventListener("click", function() {
