@@ -1,23 +1,20 @@
 import getProductsFromApiCall from './components/getProductsFromApiCall.js';
-import showProductsOnPage from './components/showProductsOnPage.js';
-
-import { indexPageHtmlContainer, url } from './constant/variables.js';
+import showFeatureProductsOnHomePage from './components/showFeatureProductsOnHomePage.js';
+import { url, urlHome, heroBannerContainer } from './constant/variables.js';
 
 const waitForProductsResult = getProductsFromApiCall(url);
-waitForProductsResult.then(showProductsOnPage);
+waitForProductsResult.then(showFeatureProductsOnHomePage);
+
+const waitForHeroBannerResult = await getProductsFromApiCall(urlHome);
+const heroBannerUrlProvided = waitForHeroBannerResult.apiData.hero_banner.url;
+
+if (!heroBannerUrlProvided) {
+  //Some default value if no hero banner url
+} else {
+
+  heroBannerContainer.style.background ="red"
+}
 
 
 
-
-
-/*
-return cardContainerElement.innerHTML += `<div class="card">
-                                            <img src"${products.image_url}">
-                                            <hgroup class="card-body">
-                                              <h2>${products.title}</h2>
-                                              <p>${products.price}</p>
-                                              <a href="product.html" class="btn btn-primary">to product</a>
-                                            </hgroup>
-                                          </div>`;
-*/
 

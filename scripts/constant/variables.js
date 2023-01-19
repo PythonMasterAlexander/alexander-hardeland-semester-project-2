@@ -1,6 +1,7 @@
-import { baseUrl, productsUrl } from './constants.js';
+import { baseUrl, productsUrl, homeUrl } from './constants.js';
 
-export const indexPageHtmlContainer = document.querySelector(".products-container");
+export const homePageProductContainer = document.querySelector(".home-page-products-container");
+
 export const containerForErrorMessage = document.querySelector(".container-for-error-message");
 
 export const showErrorToUserContainer = document.querySelector(".show-error-to-user");
@@ -13,12 +14,16 @@ export const dynamicMenuContainer = document.querySelector(".dynamic-header-cont
 export const contentInQueryString = document.location.search;
 
 export const url = baseUrl + productsUrl;
+export const urlHome = baseUrl + homeUrl;
+
 export const addEditForm = document.querySelector("#edit-page-form");
-
 export const cardContainerElement = document.querySelector(".card-container");
-export const filterInputField = document.querySelector("#filter-input-field");
 
+export const filterInputField = document.querySelector("#filter-input-field");
 export const productPageContainer = document.querySelector(".card-container-product-page");
+
+export const heroBannerContainer = document.querySelector(".hero-banner-container")
+export const cartPageContainer = document.querySelector(".cart-page-product-container");
 
 export const attributesOnErrorMessage = {
   alertClass: "alert",

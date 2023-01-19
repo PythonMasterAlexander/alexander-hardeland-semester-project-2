@@ -1,6 +1,10 @@
+import { addProductTextToCart } from '../constant/constants.js';
+
 export function createCheckBox(id, name) {
   const containerElement = document.createElement("div");
   const inputElement = document.createElement("input");
+  const spanElement = document.createElement("span");
+  spanElement.append(document.createTextNode(addProductTextToCart));
 
   containerElement.classList.add("form-check");
   inputElement.classList.add("form-check-input");
@@ -10,7 +14,7 @@ export function createCheckBox(id, name) {
   inputElement.setAttribute("data-id", id);
   inputElement.setAttribute("data-name", name);
 
-  containerElement.append(inputElement);
+  containerElement.append(spanElement, inputElement);
   return containerElement;
 }
 
@@ -20,14 +24,16 @@ export default function outputProduct(data, productContainer) {
 
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("card");
+
   const imageElement = document.createElement("img");
+  const productDescriptionElement = document.createElement("p");
   const groupElement = document.createElement("hgroup");
-
   const headingTwoElement = document.createElement("h2");
-  headingTwoElement.append(document.createTextNode(title));
 
-  const paragraphElement = document.createElement("p");
-  paragraphElement.append(document.createTextNode(price));
+  const spanElement = document.createElement("span");
+  spanElement.append(document.createTextNode(price));
+  headingTwoElement.append(document.createTextNode(title));
+  productDescriptionElement.append(document.createTextNode(description));
 
   const checkBoxContainer = createCheckBox(id, title);
   
@@ -35,7 +41,7 @@ export default function outputProduct(data, productContainer) {
   imageElement.setAttribute("src", ``);
 
   //checkBoxContainer.append(checkBoxElement);
-  groupElement.append(headingTwoElement, paragraphElement)
+  groupElement.append(headingTwoElement, spanElement, productDescriptionElement);
   cardContainer.append(imageElement, groupElement, checkBoxContainer);
 
   return productContainer.append(cardContainer);

@@ -14,13 +14,11 @@ function outputProductsOnPage(products) {
   //Something is happening here, the listOfProducts is undefined when generating a new list in the event listener 
   listOfProducts.forEach(function(products) {
     const { id, title, price, imageUrl } = products;
-    return cardContainerElement.append(outputCardOnPage(id, title, price, "", `${productPagePath + id}`));
+    return cardContainerElement.append(outputCardOnPage(title, price, "", `${productPagePath + id}`));
   });
 }
-
 outputProductsOnPage(getApiData);
 
-//Make it so if a product has been marked in the product page, when you go back the product must also be marked on the products page
 
 filterInputField.addEventListener("keyup", function() {
   const filterKeyValue = this.value.trim().toLowerCase();
@@ -33,23 +31,9 @@ filterInputField.addEventListener("keyup", function() {
     } 
   });
 
+  //This is where the code don't work, the error is listOfProducts is undefinded
   console.log(filteredProducts);
   console.log(productsToFilter);
   productsToFilter = filteredProducts;
-  //This is where the code don't work, the error is listOfProducts is undefinded
   outputProductsOnPage(productsToFilter);
 });
-
-//To go to product page when clicking one of the products. The product you click must show in the product page
-const checkOutProductButton = document.querySelectorAll(".product-button");
-
-checkOutProductButton.forEach((button) => {
-  button.addEventListener("click", function() {
-  console.log(getApiData);
-  });
-})
-
-
-
-
-

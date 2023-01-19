@@ -17,3 +17,5 @@ export const userKey = "user";
 export const productPagePath = "./product.html?id=";
 export const productKey = "products";
 
+export const homeUrl = "/home";
+export const addProductTextToCart = "Add product to cart";
