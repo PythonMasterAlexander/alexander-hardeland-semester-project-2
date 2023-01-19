@@ -24,10 +24,8 @@ function outputProductInCart(listOfProducts, pageContainer) {
   //Loop over the listOfProducts
   listOfProducts.forEach((product) => {
     const { title, price, image_url } = product.values;
-    console.log(title, price, image_url);
 
-    const returnProduct = createCartProduct(pageContainer, title, image_url, price);
-    console.log(returnProduct);
+    createCartProduct(pageContainer, title, image_url, price);
   });
 }
 export default outputProductInCart;
