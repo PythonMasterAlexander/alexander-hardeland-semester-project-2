@@ -24,6 +24,7 @@ export const productPageContainer = document.querySelector(".card-container-prod
 
 export const heroBannerContainer = document.querySelector(".hero-banner-container")
 export const cartPageContainer = document.querySelector(".cart-page-product-container");
+export const ifNoHeroBannerIsProvided = "https://i.postimg.cc/nch4QgTZ/chuttersnap-4-JHMt29fvj8-unsplash.jpg";
 
 export const attributesOnErrorMessage = {
   alertClass: "alert",
