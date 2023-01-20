@@ -1,4 +1,4 @@
-import errorMessageToUser from '../utilities/errorMessageToUser.js';
+import errorMessageToUser from './errorMessageToUser.js';
 
 function showUserLoginError(parentElement, messageToUser, className) {
   const spanElement = document.createElement("span");
@@ -8,6 +8,5 @@ function showUserLoginError(parentElement, messageToUser, className) {
 
   parentElement.append(spanElement);
   return parentElement;
-}
-
+} 
 export default showUserLoginError;

@@ -1,4 +1,4 @@
-import getProductsFromApiCall from './components/getProductsFromApiCall.js';
+import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 import showFeatureProductsOnHomePage from './components/showFeatureProductsOnHomePage.js';
 import { url, urlHome, heroBannerContainer } from './constant/variables.js';
 

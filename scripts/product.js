@@ -1,5 +1,5 @@
 import outputProduct from './components/outputProduct.js';
-import getProductsFromApiCall from './components/getProductsFromApiCall.js';
+import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 
 import { productKey } from './constant/constants.js';
 import { url, productPageContainer } from './constant/variables.js';

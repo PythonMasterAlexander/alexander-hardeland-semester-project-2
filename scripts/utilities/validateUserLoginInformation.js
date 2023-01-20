@@ -1,24 +1,19 @@
-import showUserLoginError from '../components/showUserLoginError.js';
-import { saveUserLoginToken, saveUserLogin } from '../components/localStorageComponents.js';
+import showUserLoginError from './showUserLoginError.js';
 
+import { saveUserLoginToken, saveUserLogin } from '../components/localStorageComponents.js';
 import { baseUrl, productsAuth, inputLength, wrongLoginCredentials, tokenKey, userKey } from '../constant/constants.js';
 import { showErrorToUserContainer } from '../constant/variables.js';
 
+const inputFields = document.querySelectorAll(".form-control");
 export default function validateUserLoginInformation() {
   event.preventDefault();
-  const formElement = event.target;
-
-  const usernameInputField = formElement[1];
-  const passwordInputField = formElement[2];
-
-  //Create a object of the values on the input fields
+  const formElement = this;
   const formDataOnInputs = new FormData(formElement);
 
   const username = formDataOnInputs.get("username");
   const password = formDataOnInputs.get("password");
 
   
-  //--> Find out how to display a empty input box 
   if ((username.length > inputLength) && (password.length > inputLength)) {
     loginUser(username, password);
     
@@ -27,19 +22,13 @@ export default function validateUserLoginInformation() {
     if (username.length < inputLength || password.length < inputLength) {
       showUserLoginError(showErrorToUserContainer, wrongLoginCredentials, "form-text");
 
-      usernameInputField.addEventListener("click", function() {
-        //Bug in code --> Attempt to login more than one time with wrong length of username will throw an error in the console, need to find some other way 
-        //of grabbing/choosing the span element here
-        //document.querySelector(".form-text").remove();
-        
-        usernameInputField.value = "";
-      }); 
+      inputFields.forEach((inputField) => {
+        inputField.addEventListener("click", function() {
+          showErrorToUserContainer.replaceChildren();
+        }); 
+      });
     } 
   }
-}
-
-//Want to put the addEventListener function on its own and import it from another file
-function removeInputAndErrorMessageToUser(inputField, messageElement) {
 }
 
 async function loginUser(username, password) {
@@ -62,7 +51,6 @@ async function loginUser(username, password) {
     if (jsonResponse.user) {
       saveUserLoginToken(jsonResponse.jwt);
       saveUserLogin(jsonResponse.user)
-      console.log(jsonResponse);
 
       location.href = "admin.html";
     }
@@ -72,6 +60,5 @@ async function loginUser(username, password) {
     }
   }
   catch(error) {
-    console.log(error);
   }
 }
