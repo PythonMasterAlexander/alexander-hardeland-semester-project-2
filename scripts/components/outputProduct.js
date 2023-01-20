@@ -14,7 +14,7 @@ export function createCheckBox(id, name) {
   inputElement.setAttribute("data-id", id);
   inputElement.setAttribute("data-name", name);
 
-  containerElement.append(spanElement, inputElement);
+  containerElement.append(inputElement);
   return containerElement;
 }
 

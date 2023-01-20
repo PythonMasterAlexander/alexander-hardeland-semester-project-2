@@ -1,4 +1,4 @@
-export default function outputCardOnPage(title, price, image, pageAddress) {
+export default function showProductsOnProductsPage(title, price, image, pageAddress) {
   const cardParent = document.createElement("div");
   cardParent.classList.add("card");
 
@@ -25,3 +25,4 @@ export default function outputCardOnPage(title, price, image, pageAddress) {
   
   return cardParent;
 }
+
