@@ -7,8 +7,6 @@ export const divElement = "div";
 export const productsUrl = "/products/";
 
 export const productsAuth = "/auth/local";
-export const inputLength = 2;
-
 export const wrongLoginCredentials = "username or password are wrong";
 
 export const tokenKey = "token";
@@ -19,3 +17,8 @@ export const productKey = "products";
 
 export const homeUrl = "/home";
 export const addProductTextToCart = "Add product to cart";
+
+export const loginUserName = "admin@admin.com";
+export const loginPassword = "Pass1234";
+
+export const ifNoHeroBannerIsProvided = "https://i.postimg.cc/nch4QgTZ/chuttersnap-4-JHMt29fvj8-unsplash.jpg";

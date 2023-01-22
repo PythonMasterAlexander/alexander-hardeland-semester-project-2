@@ -1,7 +1,7 @@
 import showUserLoginError from './showUserLoginError.js';
 
 import { saveUserLoginToken, saveUserLogin } from '../components/localStorageComponents.js';
-import { baseUrl, productsAuth, inputLength, wrongLoginCredentials, tokenKey, userKey } from '../constant/constants.js';
+import { baseUrl, productsAuth, wrongLoginCredentials, tokenKey, userKey, loginUserName, loginPassword} from '../constant/constants.js';
 import { showErrorToUserContainer } from '../constant/variables.js';
 
 const inputFields = document.querySelectorAll(".form-control");
@@ -13,27 +13,23 @@ export default function validateUserLoginInformation() {
   const username = formDataOnInputs.get("username");
   const password = formDataOnInputs.get("password");
 
-  
-  if ((username.length > inputLength) && (password.length > inputLength)) {
+  if ((username === loginUserName) && (password === loginPassword)) {
     loginUser(username, password);
     
   } else {
+    showUserLoginError(showErrorToUserContainer, wrongLoginCredentials, "form-text");
 
-    if (username.length < inputLength || password.length < inputLength) {
-      showUserLoginError(showErrorToUserContainer, wrongLoginCredentials, "form-text");
-
-      inputFields.forEach((inputField) => {
-        inputField.addEventListener("click", function() {
-          showErrorToUserContainer.replaceChildren();
-        }); 
-      });
-    } 
+    inputFields.forEach((inputField) => {
+      inputField.addEventListener("click", function() {
+        inputField.value = "";
+        showErrorToUserContainer.replaceChildren();
+      }); 
+    });
   }
 }
 
 async function loginUser(username, password) {
   const urlToAuthenticate = baseUrl + productsAuth;
-
   const userIdentifier = JSON.stringify({identifier: username, password: password});
 
   const dataHeadersForLoginRequest = {
@@ -59,6 +55,7 @@ async function loginUser(username, password) {
       //Add a message to user if password or username is wrong 
     }
   }
+
   catch(error) {
   }
 }

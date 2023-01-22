@@ -1,6 +1,7 @@
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 import showFeatureProductsOnHomePage from './components/showFeatureProductsOnHomePage.js';
-import { url, urlHome, heroBannerContainer, ifNoHeroBannerIsProvided } from './constant/variables.js';
+import { url, urlHome, heroBannerContainer } from './constant/variables.js';
+import { ifNoHeroBannerIsProvided } from './constant/constants.js';
 
 const waitForHeroBannerResult = await getProductsFromApiCall(urlHome);
 const waitForProductsResult = getProductsFromApiCall(url);
