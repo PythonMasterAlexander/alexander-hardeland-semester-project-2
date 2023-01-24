@@ -18,8 +18,32 @@ body, .card-payment-group__container, .login-page, .search-product-section, .sea
 
 body {
   flex-direction: column;
+  font-family: 'Space Mono', monospace;
   height: 100%;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lilita One', cursive;
+}
+
+a, button, .btn-primary {
+  font-family: 'Russo One', sans-serif;
+}
+
+h1 {
+  font-size: 67px;
+}
+
+
+//home page
+//product page
+//products page
+//login page
+//add page
+//edit page
+//cart page
+//message page
+
 
 .search-product-section__navigation {
   .link-container {

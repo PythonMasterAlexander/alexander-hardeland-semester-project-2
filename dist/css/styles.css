@@ -10769,6 +10769,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+header .nav-link {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .admin-page a, .edit-page a, .add-page a {
   padding-right: 20px;
 }
@@ -10781,11 +10786,11 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.55);
 }
 
-.nav-link {
-  text-transform: uppercase;
-  font-weight: bold;
+@media (max-width: 576px) {
+  header .nav-link {
+    font-size: 16px;
+  }
 }
-
 * {
   border: 0;
   margin: 0;
@@ -10806,7 +10811,20 @@ body, .card-payment-group__container, .login-page, .search-product-section, .sea
 
 body {
   flex-direction: column;
+  font-family: "Space Mono", monospace;
   height: 100%;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Lilita One", cursive;
+}
+
+a, button, .btn-primary {
+  font-family: "Russo One", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 67px;
 }
 
 .search-product-section__navigation .link-container {
@@ -10856,11 +10874,13 @@ footer {
   justify-content: space-around;
   padding: 50px 0;
 }
+footer a {
+  font-family: "Space Mono", monospace;
+}
 footer .footer-navigation a {
   color: #ffffff;
   display: block;
   font-size: 21px;
-  text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
   padding-top: 20px;

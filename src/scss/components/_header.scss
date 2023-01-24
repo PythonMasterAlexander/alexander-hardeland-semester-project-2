@@ -1,3 +1,10 @@
+header {
+  .nav-link {
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
 .admin-page a, .edit-page a, .add-page a {
   padding-right: 20px;
 }
@@ -10,7 +17,10 @@
   color: rgba(0, 0, 0, 0.55);
 }
 
-.nav-link {
-  text-transform: uppercase;
-  font-weight: bold;
+@media (max-width: 576px) {
+  header {
+    .nav-link {
+      font-size: $default-font-size;
+    }
+  }
 }
