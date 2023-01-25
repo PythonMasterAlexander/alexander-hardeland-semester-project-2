@@ -10811,7 +10811,6 @@ body, .card-payment-group__container, .login-page, .search-product-section, .sea
 
 body {
   flex-direction: column;
-  font-family: "Space Mono", monospace;
   height: 100%;
 }
 
