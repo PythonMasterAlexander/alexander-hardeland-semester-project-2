@@ -2,7 +2,7 @@ import outputProduct from './components/outputProduct.js';
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 
 import { productKey } from './constant/constants.js';
-import { url, productPageContainer } from './constant/variables.js';
+import { url, cardContainerElement } from './constant/variables.js';
 import { getValueFromLocalStorage, saveValueInLocalStorage } from './components/localStorageComponents.js';
 
 const productQueryString = document.location.search;
@@ -10,7 +10,7 @@ const productParameter = new URLSearchParams(productQueryString);
 const id = productParameter.get("id");
 const getApiData = await getProductsFromApiCall(url + id);
 
-outputProduct(getApiData, productPageContainer);
+outputProduct(getApiData, cardContainerElement);
 const apiData = getApiData.apiData;
 
 const checkBox = document.querySelector("#check-product");

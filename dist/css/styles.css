@@ -10824,6 +10824,15 @@ a, button, .btn-primary {
 
 h1, .h1 {
   font-size: 67px;
+  padding: 20px;
+}
+
+.home-page main .hero-banner {
+  background-repeat: no-repeat;
+  height: 700px;
+}
+.home-page main .home-page-products-container {
+  margin: 50px 0;
 }
 
 .search-product-section__navigation .link-container {

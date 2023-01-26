@@ -1,6 +1,6 @@
 import { baseUrl, productsUrl, homeUrl } from './constants.js';
 
-export const homePageProductContainer = document.querySelector(".home-page-products-container");
+//export const homePageProductContainer = document.querySelector(".home-page-products-container");
 
 export const containerForErrorMessage = document.querySelector(".container-for-error-message");
 
@@ -20,12 +20,9 @@ export const addEditForm = document.querySelector("#edit-page-form");
 export const cardContainerElement = document.querySelector(".card-container");
 
 export const filterInputField = document.querySelector("#filter-input-field");
-export const productPageContainer = document.querySelector(".card-container-product-page");
+export const heroBannerImage = document.querySelector(".hero-banner")
 
-export const heroBannerContainer = document.querySelector(".hero-banner-container")
 export const cartPageContainer = document.querySelector(".cart-page-product-container");
-
-export const ifNoHeroBannerIsProvided = "https://i.postimg.cc/nch4QgTZ/chuttersnap-4-JHMt29fvj8-unsplash.jpg";
 export const editProductsContainer = "products-edit-container";
 
 export const attributesOnErrorMessage = {
