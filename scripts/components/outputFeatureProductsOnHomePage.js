@@ -10,7 +10,7 @@ const outputFeatureProductsOnHomePage = function(productContainer, title, image_
   headerTwoElement.append(document.createTextNode(title));
   cardBody.append(headerTwoElement);
 
-  cardElement.classList.add("card");
+  cardElement.classList.add("card", "col");
   cardBody.classList.add("card-body");
 
   cardElement.append(imgElement, cardBody);

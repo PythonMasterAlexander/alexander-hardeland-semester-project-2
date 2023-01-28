@@ -32,19 +32,19 @@ a, button, .btn-primary {
 
 h1 {
   font-size: 67px;
-  padding: 20px;
 }
 
 
 //home page
 .home-page main {
-  .hero-banner {
-    background-repeat: no-repeat;
-    height: 700px;
-  }
+  background-repeat: no-repeat;
 
   .home-page-products-container {
     margin: 50px 0;
+  }
+
+  .home-page .card {
+    max-width: 20rem;
   }
 }
 
@@ -55,7 +55,6 @@ h1 {
 //edit page
 //cart page
 //message page
-
 
 .search-product-section__navigation {
   .link-container {
