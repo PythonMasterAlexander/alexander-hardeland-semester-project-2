@@ -7,12 +7,11 @@ const waitForHeroBannerResult = await getProductsFromApiCall(urlHome);
 const waitForProductsResult = getProductsFromApiCall(url);
 
 waitForProductsResult.then(showFeatureProductsOnHomePage);
-
 const heroBanner = waitForHeroBannerResult.apiData.image_url;
 
 if (!heroBanner) {
   heroBannerImage.style.backgroundImage = `url(${ifNoHeroBannerIsProvided})`;
+
 } else {
   heroBannerImage.style.backgroundImage = `url(${heroBanner})`;
-  //Style in scss
 }
