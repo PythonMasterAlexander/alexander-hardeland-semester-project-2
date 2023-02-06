@@ -8,6 +8,7 @@ footer {
 
   a {
     font-family: 'Space Mono', monospace;
+    text-transform: capitalize;
   }
 
   .footer-navigation a {
@@ -35,13 +36,7 @@ footer {
   }
 
   @media (max-width: 992px) {
-    .social-media-section {
-      align-items: flex-end;
-    }
-
-    .social-media-section__logo-container {
-      flex: 0 0 100%;
-      margin-left: 28%;
+    footer {
     }
 
     .footer-navigation a {

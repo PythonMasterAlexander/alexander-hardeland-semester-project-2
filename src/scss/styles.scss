@@ -1,10 +1,9 @@
-// Bootstrap variables overrides
 @import './components/variables';
+$light: #ffffff; 
+$primary: #1B998B;
 
-// Bootstrap styles
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-// Original styles
 @import './components/mixins';
 @import './components/header';
 @import './components/main';

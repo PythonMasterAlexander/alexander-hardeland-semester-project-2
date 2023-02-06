@@ -16,6 +16,7 @@ const outputFeatureProductsOnHomePage = function(productContainer, title, image_
 
   cardElement.classList.add("card");
   cardBody.classList.add("card-body");
+
   cardElement.append(imgElement, cardBody);
   cardContainer.append(cardElement);
 

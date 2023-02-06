@@ -1,4 +1,13 @@
 header {
+  .navbar {
+    border: 2px solid #ffffff;
+    box-shadow: 0  0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .link-container {
+    margin-left: 32px;
+  }
+
   .nav-link {
     font-weight: bold;
     font-size: 24px;

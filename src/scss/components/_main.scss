@@ -27,17 +27,39 @@ h1, h2, h3, h4, h5, h6 {
 
 a, button, .btn-primary {
   font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 67px;
+  border-radius: 6px;
+  font-size: clamp(1.76rem, 3vw + 1rem, 4.25rem);
 }
+
+
 //home page
 main {
   margin: 50px 0 50px 0;
+
+  .show-feature-products-on-home-page, .show-products-on-products-page {
+    gap: 50px;
+  }
+
+  .btn-primary {
+    width: 30%;
+  }
+
+  .card-body a {
+    width: fit-content;
+  }
 }
 
-.home-page-products-container, .products-page__product-container, .product-page__product-container{
+.home-page main {
+  h2 {
+    padding: 20px 0 20px 0;
+  }
+}
+
+.home-page-products-container, .products-page__product-container, .product-page__product-container, .cart-section {
   margin: 24px 0 24px 0;
 }
 
@@ -58,16 +80,22 @@ main {
 }
 
 .home-page img {
-  max-height: 150px;
+  max-height: 800px;
+}
+
+#add-products-form > fieldset > div {
+  margin-bottom: 24px;
 }
 //product page
-//products page
+.product-page .btn, .cart-page .btn {
+  margin-bottom: 24px;
+}
 
-//login page
-//add page
-//edit page
-//cart page
-//message page
+fieldset button {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
 .cart-navigation-section {
   .breadcrumb-item > a {
     text-transform: uppercase;
@@ -100,10 +128,6 @@ main {
 }  
 
 @media (max-width: 992px) {
-  h1 {
-    font-size: 50px;
-  }
-
   .hero-banner {
     padding-top: 50px;
     padding-bottom: 500px;
@@ -115,8 +139,15 @@ main {
 }
 
 @media (max-width: 576px) {
-  h1 {
-    font-size: 28px;
+  main {
+    a {
+      width: 100%;
+    }
+  }
+  .home-page main {
+    h1 {
+      padding-left: 0;
+    }
   }
 
   .hero-banner {
