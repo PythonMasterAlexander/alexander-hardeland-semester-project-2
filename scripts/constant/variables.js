@@ -17,6 +17,9 @@ export const url = baseUrl + productsUrl;
 export const urlHome = baseUrl + homeUrl;
 
 export const addEditForm = document.querySelector("#edit-page-form");
+export const homePageCardContainer = document.querySelector(".show-feature-products-on-home-page");
+
+export const productsPageCardContainer = document.querySelector(".show-products-on-products-page");
 export const cardContainerElement = document.querySelector(".card-container");
 
 export const filterInputField = document.querySelector("#filter-input-field");

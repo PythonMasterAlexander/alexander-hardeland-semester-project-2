@@ -1,4 +1,7 @@
 export default function showProductsOnProductsPage(title, price, image, pageAddress) {
+  const cardContainer = document.createElement("div");
+  cardContainer.classList.add("col");
+
   const cardParent = document.createElement("div");
   cardParent.classList.add("card");
 
@@ -22,7 +25,8 @@ export default function showProductsOnProductsPage(title, price, image, pageAddr
 
   cardBody.append(titleElement, priceElement, button);
   cardParent.append(imageElement, cardBody);
+  cardContainer.append(cardParent);
   
-  return cardParent;
+  return cardContainer;
 }
 

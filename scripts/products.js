@@ -2,19 +2,19 @@ import showProductsOnProductsPage from './components/showProductsOnProductsPage.
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 
 import { productPagePath } from './constant/constants.js';
-import { url, cardContainerElement, filterInputField } from './constant/variables.js';
+import { url, productsPageCardContainer, filterInputField } from './constant/variables.js';
 
 const getApiData = await getProductsFromApiCall(url);
 const productsToFilter = getApiData.apiData;
 let showProducts = getApiData.apiData;
 
 function outputProducts() {
-  cardContainerElement.replaceChildren();
+  productsPageCardContainer.replaceChildren();
 
   showProducts.forEach((product) => {
     const { id, title, price, } = product;
     const imageUrl = product.image.url;
-    cardContainerElement.append(showProductsOnProductsPage(title, price, "", `${productPagePath + id}`));
+    productsPageCardContainer.append(showProductsOnProductsPage(title, price, "", `${productPagePath + id}`));
   });
 }
 outputProducts();

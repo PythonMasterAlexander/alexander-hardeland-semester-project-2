@@ -3,7 +3,7 @@ import errorMessageToUser from '../utilities/errorMessageToUser.js';
 import addErrorStyleOnProvidedContainer from '../utilities/addErrorStyleOnProvidedContainer.js';
 
 import { errorHeading } from '../constant/constants.js';
-import { cardContainerElement, errorMessageContainer, attributesOnErrorMessage } from '../constant/variables.js';
+import { homePageCardContainer, errorMessageContainer, attributesOnErrorMessage } from '../constant/variables.js';
 
 const showFeatureProductsOnHomePage = function(products) {
   const apiDataProduct = products.apiData;
@@ -17,7 +17,7 @@ const showFeatureProductsOnHomePage = function(products) {
       const isFeatured = product.featured;
       if (isFeatured) {
         const { title, image_url } = product;
-        outputFeatureProductsOnHomePage(cardContainerElement, title, image_url);
+        outputFeatureProductsOnHomePage(homePageCardContainer, title, image_url);
       }
     });
   }

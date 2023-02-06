@@ -10850,6 +10850,10 @@ main {
   padding: 20px;
 }
 
+.home-page img {
+  max-height: 150px;
+}
+
 .cart-navigation-section .breadcrumb-item > a {
   text-transform: uppercase;
   text-decoration: none;
