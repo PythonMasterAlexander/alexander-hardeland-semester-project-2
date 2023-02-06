@@ -26,6 +26,10 @@ header {
   color: rgba(0, 0, 0, 0.55);
 }
 
+.dynamic-header-container {
+  padding-top: 24px;
+}
+
 @media (max-width: 576px) {
   header {
     .nav-link {

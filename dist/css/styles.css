@@ -10793,6 +10793,10 @@ header .nav-link {
   color: rgba(0, 0, 0, 0.55);
 }
 
+.dynamic-header-container {
+  padding-top: 24px;
+}
+
 @media (max-width: 576px) {
   header .nav-link {
     font-size: 16px;
@@ -10876,7 +10880,7 @@ main .card-body a {
   max-height: 800px;
 }
 
-#add-products-form > fieldset > div {
+#add-products-form > fieldset > div, #edit-page-form > fieldset > div {
   margin-bottom: 24px;
 }
 

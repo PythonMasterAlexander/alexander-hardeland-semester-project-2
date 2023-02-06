@@ -15,12 +15,33 @@
     <header class="dynamic-header-container">
     </header>
     <main>
-      <h1>edit products</h1>
       <div class="products-edit-container">
+        <form id="edit-page-form">
+          <fieldset>
+            <legend>Edit products</legend>
+            <div>
+              <label for="title" class="form-label">Change title</label>
+              <input name="title" type="text" class="form-control" id="title">
+            </div>
+            <div>
+              <label for="price" class="form-label">Change price</label>
+              <input name="price" type="text" class="form-control" id="price">
+            </div>
+            <div>
+              <label for="description" class="form-label">Change description</label>
+              <input name="description" type="text" class="form-control" id="description">
+            </div>
+            <div>
+              <label for="upload-image" class="form-label">Change image url</label>
+              <input name="image" type="url" class="form-control" id="upload-image">
+            </div>
+            <div>
+              <button class="btn btn-primary btn-lg" id="add-products-button">confirm</button>
+            </div>
+          </fieldset>
+        </form>
       </div>
-      <form id="edit-page-form">
-      </form>
-      <div class="link-to-admin-container">
+      <div>
         <a clss="btn btn-primary" href="admin.html" class="btn btn-primary">admin</a>
       </div>
     </main>

@@ -83,7 +83,7 @@ main {
   max-height: 800px;
 }
 
-#add-products-form > fieldset > div {
+#add-products-form > fieldset > div, #edit-page-form > fieldset > div {
   margin-bottom: 24px;
 }
 //product page
