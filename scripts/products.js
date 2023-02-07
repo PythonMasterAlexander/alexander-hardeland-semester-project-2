@@ -6,7 +6,6 @@ import { url, productsPageCardContainer, filterInputField } from './constant/var
 
 const getApiData = await getProductsFromApiCall(url);
 const productsToFilter = getApiData.apiData;
-console.log(productsToFilter);
 let showProducts = getApiData.apiData;
 
 function outputProducts() {

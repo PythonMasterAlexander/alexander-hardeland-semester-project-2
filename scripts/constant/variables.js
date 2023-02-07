@@ -1,7 +1,4 @@
 import { baseUrl, productsUrl, homeUrl } from './constants.js';
-
-//export const homePageProductContainer = document.querySelector(".home-page-products-container");
-
 export const containerForErrorMessage = document.querySelector(".container-for-error-message");
 
 export const showErrorToUserContainer = document.querySelector(".show-error-to-user");
@@ -27,6 +24,8 @@ export const heroBannerImage = document.querySelector(".hero-banner")
 
 export const cartPageContainer = document.querySelector(".cart-page-product-container");
 export const editProductsContainer = document.querySelector(".products-edit-container");
+
+export const editProductsButton = document.querySelector("#edit-products-button");
 
 export const attributesOnErrorMessage = {
   alertClass: "alert",

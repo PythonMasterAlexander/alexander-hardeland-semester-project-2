@@ -10,7 +10,6 @@ const createCartProduct = function(cartContainer, title, image, price) {
 
   priceElement.append(document.createTextNode(price));
   titleElement.append(document.createTextNode(title));
-  //Create a link back to each product 
 
   linkContainer.append(linkToProducPageElement);
   imageContainer.append(imageElement); 
@@ -21,7 +20,6 @@ const createCartProduct = function(cartContainer, title, image, price) {
 
 function outputProductInCart(listOfProducts, pageContainer) {
   
-  //Loop over the listOfProducts
   listOfProducts.forEach((product) => {
     const { title, price, image_url } = product.values;
 

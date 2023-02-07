@@ -1,4 +1,4 @@
-export default function showProductsOnProductsPage(title, price, image, pageAddress) {
+function showProductsOnProductsPage(title, price, image, pageAddress) {
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("col-md-4");
 
@@ -29,4 +29,4 @@ export default function showProductsOnProductsPage(title, price, image, pageAddr
   
   return cardContainer;
 }
-
+export default showProductsOnProductsPage;

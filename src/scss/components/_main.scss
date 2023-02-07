@@ -35,8 +35,6 @@ h1 {
   font-size: clamp(1.76rem, 3vw + 1rem, 4.25rem);
 }
 
-
-//home page
 main {
   margin: 50px 0 50px 0;
 
@@ -93,10 +91,10 @@ main {
 }
 
 .home-page img {
-  max-height: 800px;
+  max-height: 1000px;
 }
 
-#add-products-form > fieldset > div, #edit-page-form > fieldset > div {
+#add-products-form > fieldset > div, #edit-page-form > fieldset > div, .edit-page-button-container {
   margin-bottom: 24px;
 }
 //product page
@@ -144,8 +142,24 @@ fieldset button  {
   }
 }  
 
+#logout-button {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+#logout-button:hover {
+  background-color: #1B998B;
+}
+
+.alert-info {
+  width: 30%;
+  text-align: center;
+}
+
 @media (max-width: 992px) {
-  main .btn  {
+  main .btn, .alert-info {
     width: 100%;
   }
 
