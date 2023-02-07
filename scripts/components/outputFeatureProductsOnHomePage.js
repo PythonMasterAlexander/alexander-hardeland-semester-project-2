@@ -1,6 +1,6 @@
 const outputFeatureProductsOnHomePage = function(productContainer, title, image_url) {
   const cardContainer = document.createElement("div");
-  cardContainer.classList.add("col");
+  cardContainer.classList.add("col-lg-3");
 
   const cardBody = document.createElement("div");
   const imgElement = document.createElement("img"); 
@@ -14,8 +14,8 @@ const outputFeatureProductsOnHomePage = function(productContainer, title, image_
   headerTwoElement.append(document.createTextNode(title));
   cardBody.append(headerTwoElement);
 
-  cardElement.classList.add("card");
-  cardBody.classList.add("card-body");
+  cardElement.classList.add("card", "h-100");
+  cardBody.classList.add("card-body", "d-flex", "flex-column");
 
   cardElement.append(imgElement, cardBody);
   cardContainer.append(cardElement);

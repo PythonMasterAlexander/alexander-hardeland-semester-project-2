@@ -10867,6 +10867,10 @@ main .card-body a {
   margin: 24px 0 24px 0;
 }
 
+.show-feature-products-on-home-page {
+  justify-content: space-between;
+}
+
 .hero-banner {
   background-repeat: no-repeat;
   background-size: cover;
@@ -10884,7 +10888,7 @@ main .card-body a {
   transform: scale(1.05);
 }
 
-.card hgroup {
+.card hgroup, .home-page .card-body {
   justify-content: flex-end;
 }
 
@@ -10930,10 +10934,6 @@ fieldset button {
 
 .form-text {
   color: red;
-}
-
-.card-container {
-  max-width: 32%;
 }
 
 .product-page-button-container {
