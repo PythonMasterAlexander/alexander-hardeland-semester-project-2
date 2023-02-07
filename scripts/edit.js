@@ -9,19 +9,26 @@ import { contentInQueryString, url, addEditForm, editProductsContainer } from '.
 import { idIdentifier, productKey } from './constant/constants.js';
 
 addPageMenu();
-
-//To to this we need to get the products that are in the cart page
 const productsInLocalStorage = getValueFromLocalStorage(productKey);
 
-const valuesOfProductsInLocalStorage = productsInLocalStorage[0].values; 
-const { title, description, price, image_url } = valuesOfProductsInLocalStorage;
+if (!productsInLocalStorage) {
+  addEditForm.style.display = "none";
+  editProductsContainer.classList.add("alert-info", "alert");
 
-const titleInput = document.querySelector("#title");
-const descriptionInput = document.querySelector("#description");
-const priceInput = document.querySelector("#price");
-const imageInput = document.querySelector("#upload-image");
+  editProductsContainer.append(document.createTextNode("No products in the cart"));
+  editProductsContainer.style.width = "30%";
 
-titleInput.value = title;
-priceInput.value = price;
-descriptionInput.value = description; 
-imageInput.value = image_url;
+} else {
+  const valuesOfProductsInLocalStorage = productsInLocalStorage[0].values; 
+  const { title, description, price, image_url } = valuesOfProductsInLocalStorage;
+
+  const titleInput = document.querySelector("#title");
+  const descriptionInput = document.querySelector("#description");
+  const priceInput = document.querySelector("#price");
+  const imageInput = document.querySelector("#upload-image");
+
+  titleInput.value = title;
+  priceInput.value = price;
+  descriptionInput.value = description; 
+  imageInput.value = image_url;
+}

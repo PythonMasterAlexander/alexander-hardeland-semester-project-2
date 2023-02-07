@@ -6,15 +6,15 @@ import { url, productsPageCardContainer, filterInputField } from './constant/var
 
 const getApiData = await getProductsFromApiCall(url);
 const productsToFilter = getApiData.apiData;
+console.log(productsToFilter);
 let showProducts = getApiData.apiData;
 
 function outputProducts() {
   productsPageCardContainer.replaceChildren();
 
   showProducts.forEach((product) => {
-    const { id, title, price, } = product;
-    const imageUrl = product.image.url;
-    productsPageCardContainer.append(showProductsOnProductsPage(title, price, "", `${productPagePath + id}`));
+    const { id, title, price, image_url } = product;
+    productsPageCardContainer.append(showProductsOnProductsPage(title, price, image_url, `${productPagePath + id}`));
   });
 }
 outputProducts();

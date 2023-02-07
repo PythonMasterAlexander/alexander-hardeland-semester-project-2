@@ -36,11 +36,8 @@ export default function outputProduct(data, productContainer) {
   productDescriptionElement.append(document.createTextNode(description));
 
   const checkBoxContainer = createCheckBox(id, title);
-  
-  //Nb remember to set src attribute ${image_url}
-  imageElement.setAttribute("src", ``);
+  imageElement.setAttribute("src", `${image_url}`);
 
-  //checkBoxContainer.append(checkBoxElement);
   groupElement.append(headingTwoElement, spanElement, productDescriptionElement);
   cardContainer.append(imageElement, groupElement, checkBoxContainer);
 

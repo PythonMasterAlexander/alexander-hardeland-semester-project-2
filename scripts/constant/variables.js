@@ -26,7 +26,7 @@ export const filterInputField = document.querySelector("#filter-input-field");
 export const heroBannerImage = document.querySelector(".hero-banner")
 
 export const cartPageContainer = document.querySelector(".cart-page-product-container");
-export const editProductsContainer = "products-edit-container";
+export const editProductsContainer = document.querySelector(".products-edit-container");
 
 export const attributesOnErrorMessage = {
   alertClass: "alert",

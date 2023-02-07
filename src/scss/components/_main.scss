@@ -44,6 +44,10 @@ main {
     gap: 50px;
   }
 
+  .show-products-on-products-page {
+    justify-content: space-between;
+  }
+
   .btn-primary {
     width: 30%;
   }
@@ -60,7 +64,7 @@ main {
 }
 
 .home-page-products-container, .products-page__product-container, .product-page__product-container, .cart-section {
-  margin: 24px 0 24px 0;
+  margin: 24px 0 32px 0;
 }
 
 .product-page h1, .products-page h1, .cart-page h1 {
@@ -76,7 +80,16 @@ main {
 } 
 
 .card {
+  transition: 0.3s;
   padding: 20px;
+}
+
+.products-page .card:hover {
+  transform: scale(1.05);
+}
+
+.card hgroup {
+  justify-content: flex-end;
 }
 
 .home-page img {
@@ -91,9 +104,13 @@ main {
   margin-bottom: 24px;
 }
 
-fieldset button {
+fieldset button  {
   width: 100%;
   margin-bottom: 24px;
+}
+
+#user-login-form a {
+  width: 100%;
 }
 
 .cart-navigation-section {
@@ -128,6 +145,10 @@ fieldset button {
 }  
 
 @media (max-width: 992px) {
+  main .btn  {
+    width: 100%;
+  }
+
   .hero-banner {
     padding-top: 50px;
     padding-bottom: 500px;
@@ -139,11 +160,6 @@ fieldset button {
 }
 
 @media (max-width: 576px) {
-  main {
-    a {
-      width: 100%;
-    }
-  }
   .home-page main {
     h1 {
       padding-left: 0;

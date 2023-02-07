@@ -1,12 +1,12 @@
 export default function showProductsOnProductsPage(title, price, image, pageAddress) {
   const cardContainer = document.createElement("div");
-  cardContainer.classList.add("col");
+  cardContainer.classList.add("col-md-4");
 
   const cardParent = document.createElement("div");
-  cardParent.classList.add("card");
+  cardParent.classList.add("card", "h-100");
 
   const cardBody = document.createElement("hgroup");
-  cardBody.classList.add("card-body");
+  cardBody.classList.add("card-body", "d-flex", "flex-column");
 
   const titleElement = document.createElement("h2");
   titleElement.append(document.createTextNode(title));
