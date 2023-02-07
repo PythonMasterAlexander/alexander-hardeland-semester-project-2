@@ -10932,6 +10932,14 @@ fieldset button {
   color: red;
 }
 
+.card-container {
+  max-width: 32%;
+}
+
+.product-page-button-container {
+  margin-left: 10px;
+}
+
 .search-product-section__navigation .link-container {
   align-items: center;
   background: #1B998B;
@@ -10962,6 +10970,15 @@ fieldset button {
 @media (max-width: 992px) {
   main .btn, .alert-info {
     width: 100%;
+  }
+  h1, .h1 {
+    text-align: center;
+  }
+  .product-page-button-container {
+    margin: 0;
+  }
+  .product-page__product-container img, .card-container {
+    max-width: 100%;
   }
   .hero-banner {
     padding-top: 50px;

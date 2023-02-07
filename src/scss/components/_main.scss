@@ -97,7 +97,6 @@ main {
 #add-products-form > fieldset > div, #edit-page-form > fieldset > div, .edit-page-button-container {
   margin-bottom: 24px;
 }
-//product page
 .product-page .btn, .cart-page .btn {
   margin-bottom: 24px;
 }
@@ -136,6 +135,14 @@ fieldset button  {
   color: red;
 }
 
+.card-container {
+  max-width: 32%;
+}
+
+.product-page-button-container {
+  margin-left: 10px;
+}
+
 .search-product-section__navigation {
   .link-container {
     @include media-container-style(#1B998B); 
@@ -161,6 +168,18 @@ fieldset button  {
 @media (max-width: 992px) {
   main .btn, .alert-info {
     width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .product-page-button-container {
+    margin: 0;
+  }
+
+  .product-page__product-container img, .card-container {
+    max-width: 100%;
   }
 
   .hero-banner {
