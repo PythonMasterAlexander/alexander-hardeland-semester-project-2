@@ -26,7 +26,9 @@ export const cartPageContainer = document.querySelector(".cart-page-product-cont
 export const editProductsContainer = document.querySelector(".products-edit-container");
 
 export const editProductsButton = document.querySelector("#edit-products-button");
+export const cartSectionContainer = document.querySelector(".cart-section");
 
+export const cartIsEmptyWarningContainer = document.querySelector(".cart-is-empty-message-container");
 export const attributesOnErrorMessage = {
   alertClass: "alert",
   warningClass: "alert-warning",
