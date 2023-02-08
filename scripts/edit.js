@@ -1,36 +1,33 @@
 import deleteProduct from './components/deleteProduct.js';
-import  outputProduct from './components/outputProduct.js';
-import outputProductsEditFieldsOnEditPage from './components/showEditProductFieldsOnEditPage.js';
+import outputProduct from './components/outputProduct.js';
+import outputProductOnEditPage from './components/outputProductOnEditPage.js';
+import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 import logoutUser from './utilities/logoutUser.js';
 import { default as addPageMenu } from './components/adminPagesNavigationMenu.js';
 import { getValueFromLocalStorage } from './components/localStorageComponents.js';
-import { contentInQueryString, url, addEditForm, editProductsContainer, editProductsButton } from './constant/variables.js';
-import { idIdentifier, productKey } from './constant/constants.js';
+import {  url, addEditForm, editProductsContainer } from './constant/variables.js';
+import { productKey, tokenKey } from './constant/constants.js';
 
 addPageMenu();
-deleteProduct();
 
 const logoutButton = document.querySelector("#logout-button");
 logoutUser(logoutButton);
 
 const productsInLocalStorage = getValueFromLocalStorage(productKey);
-if (localStorage.getItem("products") === null) {
+if (localStorage.getItem(productKey) === null) {
   addEditForm.style.display = "none";
 
   editProductsContainer.classList.add("alert-info", "alert");
   editProductsContainer.append(document.createTextNode("No products in the cart"));
 
 } else {
-  const valuesOfProductsInLocalStorage = productsInLocalStorage[0].values; 
-  const { title, description, price, image_url } = valuesOfProductsInLocalStorage;
-  const titleInput = document.querySelector("#title");
-  const descriptionInput = document.querySelector("#description");
-  const priceInput = document.querySelector("#price");
-  const imageInput = document.querySelector("#upload-image");
+  const productQueryString = document.location.search;
+  const productParameter = new URLSearchParams(productQueryString);
+  const id = productParameter.get("id");
+  const getApiData = await getProductsFromApiCall(url + id);
+  const loginValidationToken = getValueFromLocalStorage(tokenKey);
 
-  titleInput.value = title;
-  priceInput.value = price;
-  descriptionInput.value = description; 
-  imageInput.value = image_url;
-  //At this point I am stuck with little time left before delivering the project 
+  outputProductOnEditPage(getApiData);
+  await deleteProduct(id, loginValidationToken);
+  localStorage.removeItem(productKey);
 }

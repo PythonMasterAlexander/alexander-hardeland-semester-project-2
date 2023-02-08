@@ -17,7 +17,7 @@ export default function submitProductToApi() {
   } else {
     //Create a message to user that the product was added
   }
-  const apiData = {
+  let apiData = {
     title: title,
     price: price,
     description: description,
@@ -26,6 +26,18 @@ export default function submitProductToApi() {
 
   const userToken = getTokenFromStorage();
   addProductToApi(apiData, userToken, url);
+
+  const titleInput = document.querySelector("#title");
+  titleInput.value = "";
+
+  const descriptionInput = document.querySelector("#description");
+  descriptionInput.value = "";
+
+  const priceInput = document.querySelector("#price");
+  priceInput.value = "";
+
+  const imageInput = document.querySelector("#upload-image");
+  imageInput.value = "";
 }
 
 async function addProductToApi(dataToSendToApi, userToken, url) {

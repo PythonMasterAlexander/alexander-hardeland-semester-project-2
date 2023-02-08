@@ -10960,6 +10960,10 @@ fieldset button {
   justify-content: center;
 }
 
+.admin-page section {
+  max-width: 500px;
+}
+
 .page-wrapper {
   flex: 1 0 auto;
 }
@@ -11032,6 +11036,9 @@ fieldset button {
   }
 }
 @media (max-width: 576px) {
+  .admin-page h1, .admin-page .h1 {
+    text-align: center;
+  }
   .home-page main h1, .home-page main .h1 {
     padding-left: 0;
   }
