@@ -1,8 +1,10 @@
+import editProduct from './components/editProduct.js';
 import deleteProduct from './components/deleteProduct.js';
 import outputProduct from './components/outputProduct.js';
 import outputProductOnEditPage from './components/outputProductOnEditPage.js';
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 import logoutUser from './utilities/logoutUser.js';
+import { editProductsButton } from './constant/variables.js'
 import { default as addPageMenu } from './components/adminPagesNavigationMenu.js';
 import { getValueFromLocalStorage } from './components/localStorageComponents.js';
 import {  url, addEditForm, editProductsContainer } from './constant/variables.js';
@@ -28,6 +30,7 @@ if (localStorage.getItem(productKey) === null) {
   const loginValidationToken = getValueFromLocalStorage(tokenKey);
 
   outputProductOnEditPage(getApiData);
-  await deleteProduct(id, loginValidationToken);
-  localStorage.removeItem(productKey);
+  console.log(getApiData.apiData);
+  await deleteProduct(id, loginValidationToken, productKey);
+  await editProduct(id, loginValidationToken, getApiData.apiData);
 }

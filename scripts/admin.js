@@ -17,4 +17,5 @@ let productInLocalStorage = getValueFromLocalStorage(productKey);
 for(let i = 0; i < productInLocalStorage.length; i++) {
   const product = productInLocalStorage[i].values;
   outputProductOnAdminPage(product, showCartSection);
+  //This is where the product in localStorage should be deleted if the user has deleted it from the edit page
 }

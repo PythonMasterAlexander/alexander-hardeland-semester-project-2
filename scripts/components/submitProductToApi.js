@@ -59,4 +59,5 @@ async function addProductToApi(dataToSendToApi, userToken, url) {
   } catch(error) {
     return error;
   }
+  const productAdded = confirm("Product was added");
 }
