@@ -10892,6 +10892,10 @@ main .card-body a {
   padding: 20px;
 }
 
+#check-product:hover {
+  cursor: pointer;
+}
+
 .summary-price {
   padding-left: 32px;
 }
@@ -10902,6 +10906,15 @@ main .card-body a {
 
 .card hgroup, .home-page .card-body {
   justify-content: flex-end;
+}
+
+hgroup {
+  padding-top: 24px;
+}
+
+hgroup p {
+  margin-top: 10px;
+  max-width: 500px;
 }
 
 #add-products-form > fieldset > div, #edit-page-form > fieldset > div, .edit-page-button-container {

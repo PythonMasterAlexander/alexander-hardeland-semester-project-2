@@ -3,7 +3,13 @@ import { addProductTextToCart } from '../constant/constants.js';
 export function createCheckBox(id, name) {
   const containerElement = document.createElement("div");
   const inputElement = document.createElement("input");
+
   const spanElement = document.createElement("span");
+  const spanTitleElement = document.createElement("span");
+
+  spanTitleElement.append(document.createTextNode("Add product to cart"));
+  spanTitleElement.style.textDecoration = "underline";
+
   spanElement.append(document.createTextNode(addProductTextToCart));
 
   containerElement.classList.add("form-check");
@@ -14,7 +20,7 @@ export function createCheckBox(id, name) {
   inputElement.setAttribute("data-id", id);
   inputElement.setAttribute("data-name", name);
 
-  containerElement.append(inputElement);
+  containerElement.append(spanTitleElement, inputElement);
   return containerElement;
 }
 
