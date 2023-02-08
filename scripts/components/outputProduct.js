@@ -27,11 +27,13 @@ export default function outputProduct(data, productContainer) {
 
   const imageElement = document.createElement("img");
   const productDescriptionElement = document.createElement("p");
+
   const groupElement = document.createElement("hgroup");
   const headingTwoElement = document.createElement("h2");
 
   const spanElement = document.createElement("span");
-  spanElement.append(document.createTextNode(price));
+  spanElement.append(document.createTextNode(`Price $${price}`));
+
   headingTwoElement.append(document.createTextNode(title));
   productDescriptionElement.append(document.createTextNode(description));
 
