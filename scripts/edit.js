@@ -4,7 +4,6 @@ import outputProduct from './components/outputProduct.js';
 import outputProductOnEditPage from './components/outputProductOnEditPage.js';
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
 import logoutUser from './utilities/logoutUser.js';
-import { editProductsButton } from './constant/variables.js'
 import { default as addPageMenu } from './components/adminPagesNavigationMenu.js';
 import { getValueFromLocalStorage } from './components/localStorageComponents.js';
 import {  url, addEditForm, editProductsContainer } from './constant/variables.js';
@@ -25,12 +24,12 @@ if (localStorage.getItem(productKey) === null) {
 } else {
   const productQueryString = document.location.search;
   const productParameter = new URLSearchParams(productQueryString);
+
   const id = productParameter.get("id");
   const getApiData = await getProductsFromApiCall(url + id);
   const loginValidationToken = getValueFromLocalStorage(tokenKey);
 
   outputProductOnEditPage(getApiData);
-  console.log(getApiData.apiData);
   await deleteProduct(id, loginValidationToken, productKey);
   await editProduct(id, loginValidationToken, getApiData.apiData);
 }
