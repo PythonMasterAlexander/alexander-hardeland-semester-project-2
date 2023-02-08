@@ -7,7 +7,7 @@ const createCartProduct = function(cartContainer, title, image, price, id) {
   imageElement.setAttribute("alt", `${title}`);
 
   const linkToProducPageElement = document.createElement("a");
-  linkToProducPageElement.setAttribute("href", `/product.html?=${id}`);
+  linkToProducPageElement.setAttribute("href", `products.html`);
 
   const priceElement = titleElement.cloneNode(false);
   const linkContainer = titleElement.cloneNode(false);
@@ -16,8 +16,7 @@ const createCartProduct = function(cartContainer, title, image, price, id) {
   priceElement.append(document.createTextNode(`$${price}`));
   titleElement.append(document.createTextNode(title));
 
-  linkToProducPageElement.append(document.createTextNode("Show product"));
-  linkToProducPageElement.setAttribute("href", `product.html`);
+  linkToProducPageElement.append(document.createTextNode("Products view page"));
 
   linkContainer.append(linkToProducPageElement);
   imageContainer.append(imageElement); 

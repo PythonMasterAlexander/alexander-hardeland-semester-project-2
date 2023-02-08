@@ -1,16 +1,10 @@
 import deleteProduct from './components/deleteProduct.js';
-import  getProductsFromApiCall  from './utilities/getProductsFromApiCall.js';
-
 import  outputProduct from './components/outputProduct.js';
 import outputProductsEditFieldsOnEditPage from './components/showEditProductFieldsOnEditPage.js';
-
 import logoutUser from './utilities/logoutUser.js';
 import { default as addPageMenu } from './components/adminPagesNavigationMenu.js';
-
 import { getValueFromLocalStorage } from './components/localStorageComponents.js';
 import { contentInQueryString, url, addEditForm, editProductsContainer, editProductsButton } from './constant/variables.js';
-console.log(editProductsButton);
-
 import { idIdentifier, productKey } from './constant/constants.js';
 
 addPageMenu();
@@ -28,7 +22,6 @@ if (localStorage.getItem("products") === null) {
 
 } else {
   const valuesOfProductsInLocalStorage = productsInLocalStorage[0].values; 
-
   const { title, description, price, image_url } = valuesOfProductsInLocalStorage;
   const titleInput = document.querySelector("#title");
   const descriptionInput = document.querySelector("#description");
@@ -39,5 +32,5 @@ if (localStorage.getItem("products") === null) {
   priceInput.value = price;
   descriptionInput.value = description; 
   imageInput.value = image_url;
-  //At this point I am stuck with little time left for my delivery
+  //At this point I am stuck with little time left before delivering the project 
 }
