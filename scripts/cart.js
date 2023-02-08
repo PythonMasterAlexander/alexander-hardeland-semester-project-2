@@ -1,13 +1,11 @@
 import outputProductInCart from './components/outputProductInCart.js';
-
 import { productKey } from './constant/constants.js';
 import { getValueFromLocalStorage } from './components/localStorageComponents.js';
 import { cartPageContainer, cartSectionContainer, cartIsEmptyWarningContainer } from './constant/variables.js';
 
 const summaryPriceElement = document.querySelector(".summary-price");
-console.log(summaryPriceElement);
-
 const productsInLocalStorage = getValueFromLocalStorage(productKey);
+
 if (!productsInLocalStorage.length) {
   cartSectionContainer.style.display = "none";
 

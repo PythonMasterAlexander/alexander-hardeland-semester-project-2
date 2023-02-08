@@ -1,6 +1,5 @@
 import showProductsOnProductsPage from './components/showProductsOnProductsPage.js';
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
-
 import { productPagePath } from './constant/constants.js';
 import { url, productsPageCardContainer, filterInputField } from './constant/variables.js';
 

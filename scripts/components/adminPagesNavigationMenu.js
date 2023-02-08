@@ -25,7 +25,7 @@ export default function adminPagesNavigationMenu() {
 
   adminPage.setAttribute("href", "admin.html");
   adminPage.appendChild(document.createTextNode(`User: ${loginUserName}`));
-  adminPage.classList.add(`${pathname === "/admin.html" ? "admin-pages-active-link" : "admin-pages-none-active-link"}`);
+  adminPage.classList.add(`${pathname === "/admin.html" ? "admin-pages-active-link" : "admin-pages-none-active-link"}`, "show-admin-page-as-block");
 
   let authenticatorLink;
   authenticatorLink = dynamicMenuContainer.append(adminPage);

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Cool Kick's webpage where users and administrator can login and change the product API">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cool Kick's webpage where users and administrator can login and change the product API">
   <link rel="stylesheet" href="./dist/css/styles.css">
   <title>Cool Kick's login page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,26 +15,22 @@
   <div class="page-wrapper login-page">
     <form id="user-login-form" action="submit" method="GET"> 
       <fieldset>
-        <legend>login</legend>
+        <legend>Login</legend>
         <div class="show-error-to-user">
         </div>
         <div>
-          <label for="username-input" class="form-label">username</label>
-          <input name="username" type="text" id="username-input" class="form-control" aria-describedby="if-username-wrong--show">
+          <label for="username-input" class="form-label">Username</label>
+          <input name="username" type="text" id="username-input" class="form-control">
         </div>
         <div>
-          <label for="password-input" class="form-label">password</label>
-          <input name="password" type="text" id="password-input" class="form-control" aria-describedby="if-password-wrong--show">
+          <label for="password-input" class="form-label">Password</label>
+          <input name="password" type="text" id="password-input" class="form-control">
         </div>
-        <div>
-          <a href="#"></a>
-          <p>forgot password?</p>
-        </div>
-        <div>
-          <button class="btn btn-primary btn-lg">login</button>
+        <div class="login-button-container">
+          <button class="btn btn-primary btn-lg">Login</button>
         </div>
         <div class="go-home-button-container">
-          <a class="btn btn-primary" href="index.html">go home</a>
+          <a class="btn btn-primary" href="index.html">Go home</a>
         </div>
       </fieldset>
     </form>

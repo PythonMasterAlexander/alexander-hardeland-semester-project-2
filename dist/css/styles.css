@@ -10829,7 +10829,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Lilita One", "Impact", cursive;
 }
 
-p, span, th, caption {
+p, span, th, caption, label, legend {
   font-family: "Space Mono", "Futura", monospace;
 }
 
@@ -10900,12 +10900,23 @@ main .card-body a {
   padding-left: 32px;
 }
 
-.products-page .card:hover {
+.products-page .card:hover, #username-input:hover, #password-input:hover {
   transform: scale(1.05);
 }
 
 .card hgroup, .home-page .card-body {
   justify-content: flex-end;
+}
+
+.show-admin-page-as-block {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.cart-page-product-container a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 hgroup {
@@ -10915,6 +10926,10 @@ hgroup {
 hgroup p {
   margin-top: 10px;
   max-width: 500px;
+}
+
+.login-button-container {
+  margin-top: 24px;
 }
 
 #add-products-form > fieldset > div, #edit-page-form > fieldset > div, .edit-page-button-container {

@@ -1,6 +1,5 @@
 import outputProduct from './components/outputProduct.js';
 import getProductsFromApiCall from './utilities/getProductsFromApiCall.js';
-
 import { productKey } from './constant/constants.js';
 import { url, cardContainerElement } from './constant/variables.js';
 import { getValueFromLocalStorage, saveValueInLocalStorage } from './components/localStorageComponents.js';

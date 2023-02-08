@@ -7,7 +7,7 @@ export const divElement = "div";
 export const productsUrl = "/products/";
 
 export const productsAuth = "/auth/local";
-export const wrongLoginCredentials = "username or password are wrong";
+export const wrongLoginCredentials = "Username/Password wrong";
 
 export const tokenKey = "token";
 export const userKey = "user";
