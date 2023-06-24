@@ -1,5 +1,5 @@
 footer {
-  background: #2B4570;
+  background: #2b4570;
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@ footer {
   padding: 50px 0;
 
   a {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     text-transform: capitalize;
   }
 
@@ -31,7 +31,7 @@ footer {
     gap: 30px;
 
     &__social-media-item {
-      @include media-container-style(#1B998B);
+      @include media-container-style(#1b998b);
     }
   }
 
@@ -41,7 +41,7 @@ footer {
 
     .footer-navigation a {
       font-size: $font-size-tablet-footer;
-    } 
+    }
   }
 }
 
@@ -64,6 +64,6 @@ footer {
     .footer-navigation a {
       font-size: $font-size-mobile-footer;
       text-align: center;
-    } 
+    }
   }
 }

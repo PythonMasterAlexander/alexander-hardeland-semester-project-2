@@ -6,7 +6,11 @@
   "scripts": {
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css & live-server",
-    "docs": "jsdoc -c ./jsdoc.json"
+    "docs": "jsdoc -c ./jsdoc.json",
+    "format": "npx prettier -w ./src/*",
+    "check-format": "npx prettier -c ./src/*",
+    "lint": "eslint ./scripts/*",
+    "lint-fix": "eslint ./scripts/* --cache --fix"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
@@ -22,8 +26,10 @@
   "author": "Alexander Hardeland <alexander_hardeland@proton.me>",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.43.0",
     "jsdoc": "^4.0.2",
     "live-server": "^1.2.2",
+    "prettier": "^2.8.8",
     "sass": "^1.57.1"
   }
 }

@@ -1,7 +1,7 @@
 header {
   .navbar {
     border: 2px solid #ffffff;
-    box-shadow: 0  0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .link-container {
@@ -14,7 +14,9 @@ header {
   }
 }
 
-.admin-page a, .edit-page a, .add-page a {
+.admin-page a,
+.edit-page a,
+.add-page a {
   padding-right: 20px;
 }
 
