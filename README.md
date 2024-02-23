@@ -35,39 +35,51 @@ Both sections should be responsive and the website will be populated by a Strapi
 ```bash
 git clone git@github.com:PythonMasterAlexander/alexander-hardeland-semester-project-2.git
 ```
-
 2. Install the dependencies:
-
 ```
 npm install
 ```
 
 ### Running
 
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
+1. Run a developer server with Sass and Live server packages
 ```bash
-npm run start
+npm run watch
+```
+2. Format using Prettier
+```bash
+npm run format
+```
+3. Linting code with ESLint
+```bash
+npm run lint
+```
+
+### Build
+
+1. Build the project
+```bash
+npm run build
 ```
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+This project is a personal project created by me for a Noroff delivery to be reviewed by them. In the future this project is to be used as showcase project by me. But if I want contributions in the future, more information will be put here.
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
+### Email
+* alexanderhardeland-work@gmail.com
+  
+### LinkedIn 
+* [My LinkedIn page](https://www.linkedin.com/in/alexander-hardeland-9391341a5/)
 
 ## License
+ISC License
 
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+Copyright 2023 Alexander Hardeland
+
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+Thanks to Connor Obrien teacher on Noroff for great help during the project.
