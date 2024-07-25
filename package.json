@@ -7,14 +7,14 @@
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css & live-server",
     "docs": "jsdoc -c ./jsdoc.json",
-    "format": "npx prettier -w ./src/*",
-    "check-format": "npx prettier -c ./src/*",
+    "format": "prettier -w ./src/*",
+    "check-format": "prettier -c ./src/*",
     "lint": "eslint ./scripts/*",
     "lint-fix": "eslint ./scripts/* --cache --fix"
   },
   "dependencies": {
-    "bootstrap": "^5.2.2",
-    "npm": "^9.2.0"
+    "bootstrap": "^5.3.3",
+    "npm": "^9.9.3"
   },
   "bugs": {
     "url": "https://github.com/PythonMasterAlexander/alexander-hardeland-semester-project-2/issues"
@@ -23,13 +23,18 @@
     "type": "git",
     "url": "git+https://github.com/PythonMasterAlexander/alexander-hardeland-semester-project-2"
   },
-  "author": "Alexander Hardeland <alexander_hardeland@proton.me>",
+  "author": "Alexander Hardeland",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.43.0",
-    "jsdoc": "^4.0.2",
+    "eslint": "^8.57.0",
+    "jsdoc": "^4.0.3",
     "live-server": "^1.2.2",
     "prettier": "^2.8.8",
-    "sass": "^1.57.1"
+    "sass": "^1.77.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "braces@<3.0.3": ">=3.0.3"
+    }
   }
 }
